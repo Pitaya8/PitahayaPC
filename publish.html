@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Publish</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta name="keywords" content="" />
+  <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+  <!-- bootstrap-css -->
+  <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+  <!--// bootstrap-css -->
+  <!-- css -->
+  <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+  <!--// css -->
+  <!-- font-awesome icons -->
+  <link href="css/font-awesome.css" rel="stylesheet">
+  <!-- //font-awesome icons -->
+  <!-- font -->
+  <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+  <link href="http://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+  <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700italic,700,400italic,300italic,300' rel='stylesheet' type='text/css'>
+  <!-- //font -->
+  <script src="js/jquery-1.11.1.min.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <script type="text/javascript">
+    jQuery(document).ready(function($) {
+      $(".scroll").click(function(event){
+        event.preventDefault();
+        $('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+      });
+    });
+  </script>
+
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <![endif]-->
+
+<!--  图片上传的css和js-->
+  <link rel="stylesheet" href="css/bootstrap-fileinput.css">
+  <script src="js/bootstrap-fileinput.js"></script>
+
+</head>
+<body>
+<!-- banner -->
+<div class="banner about-banner">
+  <div class="header about-header">
+    <div class="container">
+      <div class="header-left">
+        <div class="w3layouts-logo">
+          <h1>
+            <a href="index.html">Cat <span>Club</span></a>
+          </h1>
+        </div>
+      </div>
+      <div class="header-right">
+        <div class="top-nav">
+          <nav class="navbar navbar-default">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li class=""><a href="#" class="dropdown-toggle hvr-bounce-to-bottom active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Codes<span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a class="hvr-bounce-to-bottom" href="icons.html">Icons</a></li>
+                    <li><a class="hvr-bounce-to-bottom" href="typography.html">Typography</a></li>
+                    <li><a class="hvr-bounce-to-bottom active" href="publish.html">Publish</a></li>
+                  </ul>
+                </li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="good.html">Good</a></li>
+                <li><a class="" href="contact.html">Contact</a></li>
+              </ul>
+              <div class="clearfix"> </div>
+            </div>
+          </nav>
+        </div>
+        <div class="agileinfo-social-grids">
+          <ul>
+            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa fa-rss"></i></a></li>
+            <li><a href="#"><i class="fa fa-vk"></i></a></li>
+          </ul>
+        </div>
+        <div class="clearfix"> </div>
+      </div>
+      <div class="clearfix"> </div>
+    </div>
+  </div>
+  <div class="about-heading">
+    <div class="container">
+      <h2>发布救助</h2>
+    </div>
+  </div>
+</div>
+<!-- //banner -->
+<!-- contact -->
+<div class="contact-top">
+  <!-- container -->
+  <div class="container">
+<!--    <div class="map">-->
+<!--      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d158858.18237072596!2d-0.10159865000003898!3d51.52864165000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1436514341845" allowfullscreen></iframe>-->
+<!--    </div>-->
+    <div class="">
+      <div class="">
+        <div class="form-group">
+          <div class="col-md-8">
+            <div class="fileinput fileinput-new" data-provides="fileinput" id="uploadImageDiv">
+              <div class="fileinput-new thumbnail" style="width: 200px; height: 150px;">
+                <img src="${companyInfo.image}" alt="" />
+              </div>
+              <div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 200px; max-height: 150px;"></div>
+              <div>
+                        <span class="btn default btn-file"> <span
+                          class="fileinput-new">选择图片</span> <span class="fileinput-exists">更改</span> <input type="file" name="uploadImage" id="uploadImage" /></span>
+                <a href="#" class="btn default fileinput-exists" data-dismiss="fileinput">移除</a>
+                <span>请选择1M以内图片</span>
+              </div>
+            </div>
+            <div id="titleImageError" style="color: #a94442"></div>
+          </div>
+        </div>
+        <script>
+          var url = '';
+          $("#uploadImage").fileupload({
+            url : ROOT + "/security/company/uploadFile",
+            dataType : 'json',
+            autoUpload : false,
+            acceptFileTypes : /(gif|jpe?g|png)$/i,
+            maxFileSize : 1000000, // 1 MB
+            imageMaxWidth : 100,
+            imageMaxHeight : 100,
+            messages : {
+              acceptFileTypes : '文件类型不匹配',
+              maxFileSize : '文件过大',
+              minFileSize : '文件过小'
+            }
+          }).on("fileuploadadd", function(e, data) {
+            // 当文件添加上去时候调用
+            $("#titleImageError").html("");
+            data.submit()
+          }).on("fileuploaddone", function(e, data) {
+            // 上传完成时调用
+            if (data.result.returnState == "ERROR") {
+              alert("上传失败")
+              return;
+            }
+            url = data.result.returnData.url;
+          });
+
+          function updateMsg() {
+            $.ajax({
+              url : ROOT + "/security/company/updateInfo",
+              data : {
+                id : $("#companyId").val(),
+                image : url,
+                companyName : $("#companyName").val(),
+                companySite : $("#companySite").val(),
+                companyLinker : $("#companyLinker").val(),
+                companyTel : $("#companyTel").val()
+              },
+              type : "post",
+              success : function(data) {
+                if (data.returnState == "OK") {
+                  layer.msg('操作成功', {
+                    icon : 6,
+                    shade : 0.01,
+                    offset : [ '57px', '1100px' ]
+                  });
+                  $table.bootstrapTable('refresh');
+                } else {
+                  layer.msg('操作失败', {
+                    icon : 5,
+                    shade : 0.01,
+                    offset : [ '90px', '900px' ]
+                  });
+                }
+              }
+            });
+          }
+        </script>
+
+
+        <div class="form-group has-success has-feedback ">
+          <label class="control-label">姓名：</label>
+          <input type="text" name="" class=" form-control" placeholder="请输入">
+        </div>
+        <div class="form-group has-success has-feedback ">
+          <label class="control-label">姓名：</label>
+          <input type="text" name="" class=" form-control" placeholder="请输入">
+        </div>
+        <hr/>
+        <h3>文本域</h3>
+        <textarea class="form-control" rows="5" ></textarea>
+        <h3>多选和单选框</h3>
+        多选:<br/>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value=""/>
+            看电影
+          </label>
+        </div>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value=""/>
+            看小说
+          </label>
+        </div>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value=""/>
+            玩游戏
+          </label>
+        </div>
+        单选:<br/>
+        <div class="radio">
+          <label>
+            <input type="radio" name="sex" value="保密"/>保密
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="sex" value="男"/>男
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="sex" value="女"/>女
+          </label>
+        </div>
+        <br/>
+        一行显示：<br/>
+        多选:<br/>
+        <div class=" checkbox-inline">
+          <label>
+            <input type="checkbox" value=""/>
+            看电影
+          </label>
+        </div>
+        <div class="checkbox-inline">
+          <label>
+            <input type="checkbox" value=""/>
+            看小说
+          </label>
+        </div>
+        <div class="checkbox-inline">
+          <label>
+            <input type="checkbox" value=""/>
+            玩游戏
+          </label>
+        </div>
+        单选:<br/>
+        <div class="radio-inline">
+          <label>
+            <input type="radio" name="sex" value="保密"/>保密
+          </label>
+        </div>
+        <div class="radio-inline">
+          <label>
+            <input type="radio" name="sex" value="男"/>男
+          </label>
+        </div>
+        <div class="radio-inline">
+          <label>
+            <input type="radio" name="sex" value="女"/>女
+          </label>
+        </div>
+        下拉列表：
+        <select class="form-control">
+          <option>请选择</option>
+          <option>技术部</option>
+          <option>研发部</option>
+          <option>后勤部</option>
+        </select>
+        <div class="clearfix"> </div>
+    </div>
+  </div>
+  <!-- //container -->
+</div>
+<!-- //contact -->
+<!-- footer -->
+<footer>
+  <div class="container">
+    <div class="agileits-w3layouts-footer-grids">
+      <div class="col-md-4 footer-left">
+        <h3>
+          <a href="index.html">Cat <span>Club</span></a>
+        </h3>
+        <div class="footer-social-grids">
+          <ul>
+            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa fa-rss"></i></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-4 footer-left">
+        <h4>Navigation</h4>
+        <div class="col-md-6 footer-grid-left">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="icons.html">Icons</a></li>
+          </ul>
+        </div>
+        <div class="col-md-6 footer-grid-left">
+          <ul>
+            <li><a href="typography.html">Typography</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="clearfix"> </div>
+      </div>
+      <div class="col-md-4 footer-left">
+        <h4>Newsletter</h4>
+        <p>Subscribe With Us</p>
+        <form action="#" method="post">
+          <input type="email" placeholder="Subscribe" name="Subscribe" required="">
+          <button class="btn1">Go</button>
+        </form>
+      </div>
+      <div class="clearfix"> </div>
+    </div>
+  </div>
+</footer>
+<!-- footer -->
+<!-- copyright -->
+<div class="copyright">
+  <div class="container">
+    <p>Copyright &copy; 2017.Company name All rights reserved.<a target="_blank" href="http://sc.chinaz.com/moban/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a></p>
+  </div>
+</div>
+<!-- //copyright -->
+<script src="js/SmoothScroll.min.js"></script>
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+<!-- here stars scrolling icon -->
+<script type="text/javascript">
+  $(document).ready(function() {
+    /*
+      var defaults = {
+      containerID: 'toTop', // fading element id
+      containerHoverID: 'toTopHover', // fading element hover id
+      scrollSpeed: 1200,
+      easingType: 'linear'
+      };
+    */
+
+    $().UItoTop({ easingType: 'easeOutQuart' });
+
+  });
+</script>
+<!-- //here ends scrolling icon -->
+</body>
+</html>
