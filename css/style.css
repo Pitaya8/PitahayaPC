@@ -924,11 +924,11 @@ footer{
 }
 /*-- about-top --*/
 .agileits-about-top{
-	padding:4em 0;
+	padding:2em 0;
 	background:#FFFFFF;
 }
 .agileinfo-top-grids {
-    margin: 4em 0 0 0;
+    /*margin: 4em 0 0 0;*/
 }
 .agileits-about-top-heading{
 	text-align:center;
