@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ShopCart</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta name="keywords" content=""/>
+  <script type="application/x-javascript"> addEventListener("load", function () {
+    setTimeout(hideURLbar, 0);
+  }, false);
+
+  function hideURLbar() {
+    window.scrollTo(0, 1);
+  } </script>
+  <!-- bootstrap-css -->
+  <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all"/>
+  <!--// bootstrap-css -->
+  <!-- css -->
+  <link rel="stylesheet" href="css/style.css" type="text/css" media="all"/>
+  <!--// css -->
+  <!-- font-awesome icons -->
+  <link href="css/font-awesome.css" rel="stylesheet">
+  <!-- //font-awesome icons -->
+  <!-- font -->
+  <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+  <link
+    href="http://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+    rel="stylesheet">
+  <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700italic,700,400italic,300italic,300'
+        rel='stylesheet' type='text/css'>
+  <!-- //font -->
+  <script src="js/jquery-1.11.1.min.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <script type="text/javascript">
+    jQuery(document).ready(function ($) {
+      $(".scroll").click(function (event) {
+        event.preventDefault();
+        $('html,body').animate({scrollTop: $(this.hash).offset().top}, 1000);
+      });
+    });
+  </script>
+
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <![endif]-->
+
+  <!--  引入shopcart页面的less文件并解析-->
+  <link rel="stylesheet/less" type="text/css" href="css/shopcart.less">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/3.8.1/less.min.js"></script>
+  <script type="text/javascript" src="js/cookie.js"></script>
+
+  <!--  引入iview -->
+  <link rel="stylesheet" type="text/css" href="http://unpkg.com/iview/dist/styles/iview.css">
+  <script type="text/javascript" src="http://v1.vuejs.org/js/vue.min.js"></script>
+  <script type="text/javascript" src="http://unpkg.com/iview@1.0.1/dist/iview.min.js"></script>
+</head>
+<body>
+<!-- banner -->
+<div id="ShopCart">
+  <div class="header">
+    <div class="container">
+      <div class="header-left">
+        <div class="w3layouts-logo">
+          <h1>
+            <a href="index.html">Cat <span>Club</span></a>
+          </h1>
+        </div>
+      </div>
+      <div class="header-right">
+        <div class="top-nav">
+          <nav class="navbar navbar-default">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                      data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li class=""><a href="#" class="dropdown-toggle hvr-bounce-to-bottom" data-toggle="dropdown"
+                                role="button" aria-haspopup="true" aria-expanded="false">Codes<span
+                  class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a class="hvr-bounce-to-bottom" href="icons.html">Icons</a></li>
+                    <li><a class="hvr-bounce-to-bottom" href="typography.html">Typography</a></li>
+                  </ul>
+                </li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="good.html">Good</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+              <div class="clearfix"></div>
+            </div>
+          </nav>
+        </div>
+        <div class="agileinfo-social-grids">
+          <ul>
+            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa fa-rss"></i></a></li>
+            <li><a href="#"><i class="fa fa-vk"></i></a></li>
+          </ul>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+  <!--  <div class="about-heading">-->
+  <!--    <div class="container">-->
+  <!--      <h2>Sale of goods</h2>-->
+  <!--    </div>-->
+  <!--  </div>-->
+</div>
+
+<!-- about -->
+<div id="shop_cart_body">
+  <div class="container">
+    <h4>全部商品(0)</h4>
+    <div id="shop_cart_body_list">
+      <div id="shop_cart_body_list_top">
+        <ul>
+          <li>全选</li>
+          <li>商品信息</li>
+          <li></li>
+          <li>数量</li>
+          <li>小计（元）</li>
+          <li>操作</li>
+        </ul>
+      </div>
+      <!--      <div id="shop_cart_body_list_body">-->
+      <!--        <span>平台全场活动</span>-->
+      <!--        <span>活动</span>-->
+      <!--        请选择平台活动-->
+      <!--      </div>-->
+
+      <div id="shop_cart_body_lists">
+        <div class="shop_cart_body_list_content">
+          <h4>
+            一家店
+          </h4>
+          <div id="shop_cart_body_list_content_list">
+            <ul>
+              <li>
+                <input type="checkbox" class="good_check"/>
+                <img src="img/list-page/gl1.jpg"/>
+                <p>
+                  仅售上海 格力(GREE) 2匹变频 金贝 立柜式家用冷暖空调KFR-50LW/(50578)FNhAd-A1 皓雪白(WIFI)
+                </p>
+                <p>正1匹</p>
+                <p>￥12</p>
+                <span class="one_span">
+<!--                  <i-button type="ghost" class="cutnum" value="">-</i-button>-->
+                  									<button class="cutnum">-</button>
+<!--                  <script>-->
+<!--                    new Vue({-->
+<!--                      el: '#shop_cart_body_list_content_list'-->
+<!--                    })-->
+<!--                  </script>-->
+									<input type='text' class="number" value='1'>
+									</input>
+									<button class="addnum">+</button>
+								</span>
+                <span class="good_total">
+									￥12
+								</span>
+                <span class="del_li">删除</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="shop_cart_body_list_content">
+          <h4>
+            一家店
+          </h4>
+          <div id="shop_cart_body_list_content_list">
+            <ul>
+              <li>
+                <input type="checkbox" class="good_check"/>
+                <img src="img/list-page/gl1.jpg"/>
+                <p>
+                  仅售上海 格力(GREE) 2匹变频 金贝 立柜式家用冷暖空调KFR-50LW/(50578)FNhAd-A1 皓雪白(WIFI)
+                </p>
+                <p>正1匹</p>
+                <p>￥12</p>
+                <span class="one_span">
+<!--                  <i-button type="ghost" class="cutnum" value="">-</i-button>-->
+                  									<button class="cutnum">-</button>
+                  <!--                  <script>-->
+                  <!--                    new Vue({-->
+                  <!--                      el: '#shop_cart_body_list_content_list'-->
+                  <!--                    })-->
+                  <!--                  </script>-->
+									<input type='text' class="number" value='1'>
+									</input>
+									<button class="addnum">+</button>
+								</span>
+                <span class="good_total">
+									￥12
+								</span>
+                <span class="del_li">删除</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+    <div id="shop_cart_body_deal">
+      <div id="shop_cart_body_deal_left">
+        <input type="checkbox" id="quanxuan">
+        全选
+        <span>继续购物</span>
+        <span id="delall">删除所选</span>
+      </div>
+      <div id="shop_cart_body_deal_right">
+        <p>已选择<i>0</i>件商品&nbsp;总价(不含运费):<i>￥0.00</i>
+        <p>
+          <i-button type="error">去结算</i-button>
+          <script>
+            new Vue({
+              el: '#shop_cart_body_deal_right'
+            })
+          </script>
+      </div>
+    </div>
+  </div>
+
+  <!-- 精选 -->
+  <div class="team">
+    <div class="container">
+      <div class="choiceness-title">
+        <h2>精选</h2>
+      </div>
+      <div class="agile_team_grids">
+        <div class="col-md-3 agile_team_grid">
+          <div class="agile_team_grid_main">
+            <img src="http://img.boqiicdn.com/Data/U/P/img91405b8f86335f8da.jpg" alt=" " class="img-responsive">
+            <div class="p-mask">
+              <ul class="top-links two">
+                <li><a href="#"><i class="fa fa-cart-arrow-down"></i></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="agile_team_grid1">
+            <h3>* OFFER * 3 Cards for £5 (choose from 6 designs)</h3>
+            <p style="text-align: left;color:gray">The cards retail at £1.99 each, so buy 3 and save .97p!Choose any
+              3 cards - Six designs to choose fr..</p>
+            <p>£5.00</p>
+          </div>
+        </div>
+
+
+        <div class="col-md-3 agile_team_grid">
+          <div class="agile_team_grid_main">
+            <img src="http://img.boqiicdn.com/Data/U/P/img91405b8f86335f8da.jpg" alt=" " class="img-responsive">
+            <div class="p-mask">
+              <ul class="top-links two">
+                <li><a href="#"><i class="fa fa-cart-arrow-down"></i></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="agile_team_grid1">
+            <h3>* OFFER * 3 Cards for £5 (choose from 6 designs)</h3>
+            <p style="text-align: left;color:gray">The cards retail at £1.99 each, so buy 3 and save .97p!Choose any
+              3 cards - Six designs to choose fr..</p>
+            <p>£5.00</p>
+          </div>
+        </div>
+
+
+        <div class="col-md-3 agile_team_grid">
+          <div class="agile_team_grid_main">
+            <img src="http://img.boqiicdn.com/Data/U/P/img91405b8f86335f8da.jpg" alt=" " class="img-responsive">
+            <div class="p-mask">
+              <ul class="top-links two">
+                <li><a href="#"><i class="fa fa-cart-arrow-down"></i></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="agile_team_grid1">
+            <h3>* OFFER * 3 Cards for £5 (choose from 6 designs)</h3>
+            <p style="text-align: left;color:gray">The cards retail at £1.99 each, so buy 3 and save .97p!Choose any
+              3 cards - Six designs to choose fr..</p>
+            <p>£5.00</p>
+          </div>
+        </div>
+
+
+        <div class="col-md-3 agile_team_grid">
+          <div class="agile_team_grid_main">
+            <img src="http://img.boqiicdn.com/Data/U/P/img91405b8f86335f8da.jpg" alt=" " class="img-responsive">
+            <div class="p-mask">
+              <ul class="top-links two">
+                <li><a href="#"><i class="fa fa-cart-arrow-down"></i></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="agile_team_grid1">
+            <h3>* OFFER * 3 Cards for £5 (choose from 6 designs)</h3>
+            <p style="text-align: left;color:gray">The cards retail at £1.99 each, so buy 3 and save .97p!Choose any
+              3 cards - Six designs to choose fr..</p>
+            <p>£5.00</p>
+          </div>
+        </div>
+
+        <div class="clearfix"></div>
+      </div>
+    </div>
+  </div>
+  <!-- //team -->
+</div>
+<!-- //about -->
+
+<!-- footer -->
+<footer>
+  <div class="container">
+    <div class="agileits-w3layouts-footer-grids">
+      <div class="col-md-4 footer-left">
+        <h3>
+          <a href="index.html">Cat <span>Club</span></a>
+        </h3>
+        <div class="footer-social-grids">
+          <ul>
+            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa fa-rss"></i></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-4 footer-left">
+        <h4>Navigation</h4>
+        <div class="col-md-6 footer-grid-left">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="icons.html">Icons</a></li>
+          </ul>
+        </div>
+        <div class="col-md-6 footer-grid-left">
+          <ul>
+            <li><a href="typography.html">Typography</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="good.html">Good</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+      <div class="col-md-4 footer-left">
+        <h4>Newsletter</h4>
+        <p>Subscribe With Us</p>
+        <form action="#" method="post">
+          <input type="email" placeholder="Subscribe" name="Subscribe" required="">
+          <button class="btn1">Go</button>
+        </form>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</footer>
+<!-- footer -->
+<!-- copyright -->
+<div class="copyright">
+  <div class="container">
+    <p>Copyright &copy; 2017.Company name All rights reserved.<a target="_blank" href="http://sc.chinaz.com/moban/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a>
+    </p>
+  </div>
+</div>
+<!-- //copyright -->
+<script src="js/SmoothScroll.min.js"></script>
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+<!-- here stars scrolling icon -->
+<script type="text/javascript">
+  $(document).ready(function () {
+    /*
+      var defaults = {
+      containerID: 'toTop', // fading element id
+      containerHoverID: 'toTopHover', // fading element hover id
+      scrollSpeed: 1200,
+      easingType: 'linear'
+      };
+    */
+
+    $().UItoTop({easingType: 'easeOutQuart'});
+
+  });
+</script>
+<!-- //here ends scrolling icon -->
+<script type="text/javascript" src="js/shop_cart.js"></script>
+</body>
+
