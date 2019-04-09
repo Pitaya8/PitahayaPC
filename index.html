@@ -6,12 +6,14 @@
   <meta charset="utf-8">
   <meta name="keywords" content=""/>
   <script type="application/x-javascript">
-    window.addEventListener('touchmove', func, { passive: false })
-    function func(){}
+    window.addEventListener('touchmove', func, {passive: false})
+
+    function func() {
+    }
 
     addEventListener("load", function () {
       setTimeout(hideURLbar, 0);
-    }, {passive:false});
+    }, {passive: false});
 
     function hideURLbar() {
       window.scrollTo(0, 1);
@@ -53,8 +55,37 @@
   <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
   <![endif]-->
 
+  <!--  -->
+  <link rel="stylesheet/less" type="text/css" href="css/index.less">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/3.8.1/less.min.js"></script>
+  <script type="text/javascript" src="js/cookie.js"></script>
 </head>
 <body>
+<!--登录弹窗-->
+<div id="overCurtain"></div>
+<div class="hide-center">
+  <div id="formhead">
+    <div id="formhead-title">
+      用户登录
+    </div>
+    <button type="button" id="close">x</button>
+  </div>
+  <div id="formbody">
+    <div class="loginUserName">
+      <input id="input-topright-loginInput" name="userName" class="loginInput" placeholder="账号" type="text"
+             value="">
+    </div>
+    <div class="loginPassword">
+      <input id="input-bottomright-loginInput" name="password" class="loginInput" placeholder="密码" type="password"
+             style="border-bottom-right-radius:5px;">
+    </div>
+    <div id="formfoot">
+      <button id="BSignIn" type="submit">登录</button>
+    </div>
+  </div>
+</div>
+<!--//登录弹窗-->
+
 <!-- banner -->
 <div class="banner">
   <div class="header">
@@ -62,7 +93,10 @@
       <div class="header-left">
         <div class="w3layouts-logo">
           <h1>
-            <a href="index.html">Cat <span>Club</span></a>
+            <a href="index.html">
+              <!--              Cat <span>Club</span>-->
+              <img src="https://img.gzzhitu.com/zhitu-api/1554778293916.png" alt="" id="logo">
+            </a>
           </h1>
         </div>
       </div>
@@ -85,7 +119,7 @@
                 <li><a href="about.html">关于</a></li>
                 <li class="">
                   <a href="#" class="dropdown-toggle hvr-bounce-to-bottom" data-toggle="dropdown"
-                                role="button" aria-haspopup="true" aria-expanded="false">
+                     role="button" aria-haspopup="true" aria-expanded="false">
                     发布<span class="caret"></span>
                   </a>
                   <ul class="dropdown-menu">
@@ -106,13 +140,13 @@
         </div>
         <div class="agileinfo-social-grids">
           <ul>
-            <li><a href="log.html" title="个人中心"><i class="fa fa-user"></i></a></li>
-            <li><a href="log.html" title="登录"><i class="fa fa-user">登录</i></a></li>
+            <li><a title="个人中心" ><i class="fa fa-user"></i></a></li>
+            <li><a title="登录" id="login"><i class="fa fa-user">登录</i></a></li>
             <li></li>
             <li><a href="register.html" title="注册"><i class="fa fa-registered">注册</i></a></li>
-<!--            <li><a href="#"><i class="fa fa-twitter"></i></a></li>-->
-<!--            <li><a href="#"><i class="fa fa-rss"></i></a></li>-->
-<!--            <li><a href="#"><i class="fa fa-vk"></i></a></li>-->
+            <!--            <li><a href="#"><i class="fa fa-twitter"></i></a></li>-->
+            <!--            <li><a href="#"><i class="fa fa-rss"></i></a></li>-->
+            <!--            <li><a href="#"><i class="fa fa-vk"></i></a></li>-->
           </ul>
         </div>
         <div class="clearfix"></div>
@@ -127,18 +161,13 @@
           <ul class="rslides callbacks callbacks1" id="slider4">
             <li>
               <div class="agileits-banner-info">
-                <h3>Lorem ipsum dolor sit amet <span>Nulla massa magna</span></h3>
-                <div class="w3-button">
-                  <a href="single.html">More</a>
-                </div>
+                <img src="images/b1.jpg" height="" width="100%"/>
+                <!--                <h3>Lorem ipsum dolor sit amet <span>Nulla massa magna</span></h3>-->
               </div>
             </li>
             <li>
               <div class="agileits-banner-info">
-                <h3>Donec posuere cursus nibh<span>Ut molestie lectus</span></h3>
-                <div class="w3-button">
-                  <a href="single.html">More</a>
-                </div>
+                <img src="images/b2.jpg" height="" width="100%"/>
               </div>
             </li>
           </ul>
@@ -433,5 +462,9 @@
   });
 </script>
 <!-- //here ends scrolling icon -->
+<!--登录弹窗-->
+<script src="js/login.js">
+
+</script>
 </body>
 </html>
