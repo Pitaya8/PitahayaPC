@@ -5,29 +5,38 @@
   <title>Good</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="utf-8">
-  <meta name="keywords" content="" />
-  <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+  <meta name="keywords" content=""/>
+  <script type="application/x-javascript"> addEventListener("load", function () {
+    setTimeout(hideURLbar, 0);
+  }, false);
+
+  function hideURLbar() {
+    window.scrollTo(0, 1);
+  } </script>
   <!-- bootstrap-css -->
-  <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+  <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all"/>
   <!--// bootstrap-css -->
   <!-- css -->
-  <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="css/style.css" type="text/css" media="all"/>
   <!--// css -->
   <!-- font-awesome icons -->
   <link href="css/font-awesome.css" rel="stylesheet">
   <!-- //font-awesome icons -->
   <!-- font -->
   <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
-  <link href="http://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-  <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700italic,700,400italic,300italic,300' rel='stylesheet' type='text/css'>
+  <link
+    href="http://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+    rel="stylesheet">
+  <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700italic,700,400italic,300italic,300'
+        rel='stylesheet' type='text/css'>
   <!-- //font -->
   <script src="js/jquery-1.11.1.min.js"></script>
   <script src="js/bootstrap.js"></script>
   <script type="text/javascript">
-    jQuery(document).ready(function($) {
-      $(".scroll").click(function(event){
+    jQuery(document).ready(function ($) {
+      $(".scroll").click(function (event) {
         event.preventDefault();
-        $('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+        $('html,body').animate({scrollTop: $(this.hash).offset().top}, 1000);
       });
     });
   </script>
@@ -36,9 +45,9 @@
   <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
   <![endif]-->
 
-<!--  引入good页面的less文件并解析-->
-  <link rel="stylesheet/less" type="text/css"  href="css/good.less">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/3.8.1/less.min.js" ></script>
+  <!--  引入good页面的less文件并解析-->
+  <link rel="stylesheet/less" type="text/css" href="css/good.less">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/3.8.1/less.min.js"></script>
 </head>
 <body>
 <!-- banner -->
@@ -56,7 +65,8 @@
         <div class="top-nav">
           <nav class="navbar navbar-default">
             <div class="navbar-header">
-              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                      data-target="#bs-example-navbar-collapse-1">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -66,20 +76,24 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
               <ul class="nav navbar-nav">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li class=""><a href="#" class="dropdown-toggle hvr-bounce-to-bottom" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Codes<span class="caret"></span></a>
+                <li><a href="index.html">首页</a></li>
+                <li><a href="about.html">关于</a></li>
+                <li class=""><a href="#" class="dropdown-toggle hvr-bounce-to-bottom" data-toggle="dropdown"
+                                role="button" aria-haspopup="true" aria-expanded="false">
+                  发布<span class="caret"></span>
+                </a>
                   <ul class="dropdown-menu">
                     <li><a class="hvr-bounce-to-bottom" href="icons.html">Icons</a></li>
                     <li><a class="hvr-bounce-to-bottom" href="typography.html">Typography</a></li>
+                    <li><a class="hvr-bounce-to-bottom" href="publish.html">发布求助</a></li>
                   </ul>
                 </li>
                 <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="blog.html">Blog</a></li>
-                <li><a class="active" href="good.html">Good</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a class="active" href="good.html">商城</a></li>
+                <li><a href="contact.html">联系我们</a></li>
               </ul>
-              <div class="clearfix"> </div>
+              <div class="clearfix"></div>
             </div>
           </nav>
         </div>
@@ -91,16 +105,16 @@
             <li><a href="#"><i class="fa fa-vk"></i></a></li>
           </ul>
         </div>
-        <div class="clearfix"> </div>
+        <div class="clearfix"></div>
       </div>
-      <div class="clearfix"> </div>
+      <div class="clearfix"></div>
     </div>
   </div>
-<!--  <div class="about-heading">-->
-<!--    <div class="container">-->
-<!--      <h2>Sale of goods</h2>-->
-<!--    </div>-->
-<!--  </div>-->
+  <!--  <div class="about-heading">-->
+  <!--    <div class="container">-->
+  <!--      <h2>Sale of goods</h2>-->
+  <!--    </div>-->
+  <!--  </div>-->
 </div>
 <!-- //banner -->
 <!-- about -->
@@ -108,9 +122,9 @@
   <!-- about-top -->
   <div class="agileits-about-top">
     <div class="container">
-<!--      <div class="agileits-about-top-heading">-->
-<!--        <h3>Who we are</h3>-->
-<!--      </div>-->
+      <!--      <div class="agileits-about-top-heading">-->
+      <!--        <h3>Who we are</h3>-->
+      <!--      </div>-->
       <div class="agileinfo-top-grids">
         <div id="myCarousel" class="carousel slide">
           <!-- 轮播（Carousel）指标 -->
@@ -122,23 +136,28 @@
           <!-- 轮播（Carousel）项目 -->
           <div class="carousel-inner">
             <div class="item active">
-              <img src="https://www.catchat.org/shop/image/cache/catalog/2017-slider-gifts-1100x280.jpg" alt="First slide">
+              <img src="https://www.catchat.org/shop/image/cache/catalog/2017-slider-gifts-1100x280.jpg"
+                   alt="First slide">
             </div>
             <div class="item">
-              <img src="https://www.catchat.org/shop/image/cache/catalog/2017-slider-mugs-1100x280.jpg" alt="Second slide">
+              <img src="https://www.catchat.org/shop/image/cache/catalog/2017-slider-mugs-1100x280.jpg"
+                   alt="Second slide">
             </div>
             <div class="item">
-              <img src="https://www.catchat.org/shop/image/cache/catalog/2017-slider-stationery-1100x280.jpg" alt="Third slide">
+              <img src="https://www.catchat.org/shop/image/cache/catalog/2017-slider-stationery-1100x280.jpg"
+                   alt="Third slide">
             </div>
           </div>
           <!-- 轮播（Carousel）导航 -->
           <a class="carousel-control left" href="#myCarousel"
-             data-slide="prev"> <span _ngcontent-c3="" aria-hidden="true" class="glyphicon glyphicon-chevron-left"></span></a>
+             data-slide="prev"> <span _ngcontent-c3="" aria-hidden="true"
+                                      class="glyphicon glyphicon-chevron-left"></span></a>
           <a class="carousel-control right" href="#myCarousel"
-             data-slide="next"><span _ngcontent-c3="" aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span></a>
+             data-slide="next"><span _ngcontent-c3="" aria-hidden="true"
+                                     class="glyphicon glyphicon-chevron-right"></span></a>
         </div>
 
-<!--        <div class="clearfix"> </div>-->
+        <!--        <div class="clearfix"> </div>-->
       </div>
     </div>
   </div>
@@ -242,7 +261,7 @@
           </div>
         </div>
 
-        <div class="clearfix"> </div>
+        <div class="clearfix"></div>
       </div>
     </div>
   </div>
@@ -269,7 +288,7 @@
         <h4>Navigation</h4>
         <div class="col-md-6 footer-grid-left">
           <ul>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html">首页</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="gallery.html">Gallery</a></li>
             <li><a href="icons.html">Icons</a></li>
@@ -279,11 +298,12 @@
           <ul>
             <li><a href="typography.html">Typography</a></li>
             <li><a href="blog.html">Blog</a></li>
-            <li><a href="good.html">Good</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="good.html">商城</a></li>
+            <li><a href="support.html">支持</a></li>
+            <li><a href="contact.html">联系我们</a></li>
           </ul>
         </div>
-        <div class="clearfix"> </div>
+        <div class="clearfix"></div>
       </div>
       <div class="col-md-4 footer-left">
         <h4>Newsletter</h4>
@@ -293,7 +313,7 @@
           <button class="btn1">Go</button>
         </form>
       </div>
-      <div class="clearfix"> </div>
+      <div class="clearfix"></div>
     </div>
   </div>
 </footer>
@@ -301,7 +321,8 @@
 <!-- copyright -->
 <div class="copyright">
   <div class="container">
-    <p>Copyright &copy; 2017.Company name All rights reserved.<a target="_blank" href="http://sc.chinaz.com/moban/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a></p>
+    <p>Copyright &copy; 2017.Company name All rights reserved.<a target="_blank" href="http://sc.chinaz.com/moban/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a>
+    </p>
   </div>
 </div>
 <!-- //copyright -->
@@ -310,7 +331,7 @@
 <script type="text/javascript" src="js/easing.js"></script>
 <!-- here stars scrolling icon -->
 <script type="text/javascript">
-  $(document).ready(function() {
+  $(document).ready(function () {
     /*
       var defaults = {
       containerID: 'toTop', // fading element id
@@ -320,7 +341,7 @@
       };
     */
 
-    $().UItoTop({ easingType: 'easeOutQuart' });
+    $().UItoTop({easingType: 'easeOutQuart'});
 
   });
 </script>
