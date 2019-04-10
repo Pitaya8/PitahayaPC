@@ -45,8 +45,12 @@
   <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
   <![endif]-->
 
-  <!--  引入good页面的css文件并解析-->
-  <link rel="stylesheet" href="./css/logRegister.css">
+  <!--  引入Detail页面的css文件并解析-->
+  <link rel="stylesheet" href="./css/details/details.css">
+  <link rel="stylesheet" href="./css/details/htmleaf-demo.css">
+  <link rel="stylesheet" href="./css/details/jquery.exzoom.css">
+  <link rel="stylesheet" href="./css/details/normalize.css">
+
 </head>
 <body>
 <!-- banner -->
@@ -123,157 +127,79 @@
   <!--  </div>-->
 </div>
 <!-- //banner -->
-<!-- about -->
-<div class="about">
-  <!-- about-top -->
-  <div class="agileits-about-top">
-    <div class="container">
-      <!--      <div class="agileits-about-top-heading">-->
-      <!--        <h3>Who we are</h3>-->
-      <!--      </div>-->
-      <div class="agileinfo-top-grids">
-        <div id="myCarousel" class="carousel slide">
-          <!-- 轮播（Carousel）指标 -->
-          <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
-          </ol>
-          <!-- 轮播（Carousel）项目 -->
-          <div class="carousel-inner">
-            <div class="item active">
-              <img src="https://img.gzzhitu.com/zhitu-api/1554796860158.jpg"
-                   alt="First slide">
-            </div>
-            <div class="item">
-              <img src="https://img.gzzhitu.com/zhitu-api/1554796897236.jpg"
-                   alt="Second slide">
-            </div>
-            <div class="item">
-              <img src="https://img.gzzhitu.com/zhitu-api/1554796897236.jpg"
-                   alt="Third slide">
-            </div>
-          </div>
-          <!-- 轮播（Carousel）导航 -->
-          <a class="carousel-control left" href="#myCarousel"
-             data-slide="prev"> <span _ngcontent-c3="" aria-hidden="true"
-                                      class="glyphicon glyphicon-chevron-left"></span></a>
-          <a class="carousel-control right" href="#myCarousel"
-             data-slide="next"><span _ngcontent-c3="" aria-hidden="true"
-                                     class="glyphicon glyphicon-chevron-right"></span></a>
-        </div>
 
-        <!--        <div class="clearfix"> </div>-->
+
+<!-- Details -->
+<div class="Details">
+  <div id="details_body" class="container">
+    <h4></h4>
+    <!--放大镜模块-->
+    <div id="details_body_top">
+      <div class="exzoom" id="exzoom">
+        <!--大图区域-->
+        <div class="exzoom_img_box">
+          <ul class='exzoom_img_ul'>
+            <li><img src="./images/details/photos/img01.jpg"/></li>
+            <li><img src="./images/details/photos/img02.jpg"/></li>
+            <li><img src="./images/details/photos/img03.jpg"/></li>
+            <li><img src="./images/details/photos/img04.jpg"/></li>
+            <li><img src="./images/details/photos/img05.jpg"/></li>
+            <li><img src="./images/details/photos/img06.jpg"/></li>
+            <li><img src="./images/details/photos/img07.jpg"/></li>
+            <li><img src="./images/details/photos/img08.jpg"/></li>
+          </ul>
+        </div>
+        <!--缩略图导航-->
+        <div class="exzoom_nav"></div>
+        <!--控制按钮-->
+        <p class="exzoom_btn">
+          <a href="javascript:void(0);" class="exzoom_prev_btn"> &lt; </a>
+          <a href="javascript:void(0);" class="exzoom_next_btn"> &gt; </a>
+        </p>
       </div>
+
+      <!--放大镜的右边模块-->
+      <div id="details_info">
+        <div id="details_info_title">
+          23432
+        </div>
+        <div id="details_info_price">
+          <span>￥</span>12321.00
+        </div>
+        <div id="details_info_other">
+          <ul>
+            <li>
+              <p>规格<span>2 匹</span></p>
+              <br>
+              <h5>数量</h5>
+              <button class="cutnum">-</button>
+              <button class="number">1</button>
+              <button class="addnum">+</button>
+              <br><br>
+              <input type="button" id="add_shop_cart" value="加入购物车">
+            </li>
+          </ul>
+        </div>
+      </div>
+
+
+    </div>
+
+    <div id="details_body_imgbody">
+      <div id="details_body_imgbody_top">
+
+        <h4>商品详情</h4>
+      </div>
+      <div id="details_body_imgbody_body">
+        <img src="images/1.jpg"/>
+        <img src="images/1.jpg"/>
     </div>
   </div>
-  <!-- //about-top -->
 
-  <!-- choose -->
-  <div class="">
-    <div class="container">
-      <div id="shopPageExplain">
-        <span>欢迎来到动物聊天店</span>
-        <ul>
-          <li>目前每年有超过10,000只被救出的猫和小猫，通过Cat Chat找到一个新家。</li>
-          <li>每次从我们的商店购买都可以帮助更多的猫从避难所进入家中。</li>
-          <li>感谢您的支持！</li>
-        </ul>
-
-        <p><strong>如何订购：</strong>点击上面的菜单找到你要找的东西 - 购物愉快！ </p>
-        <p><strong>通过信用卡/借记卡或PayPal付款：</strong>我们的商店由PayPal提供支持，可以接受所有主要的借记卡和信用卡以及PayPal。我们可以接受£Pounds
-          Sterling，€Euros或$ US Dollars。由于我们以英国为基础，价格以英镑为单位显示。要以欧元或美元显示价格，请从货币菜单中选择（左上角）。 </p>
-        <p><strong>支票支付：</strong>请在此处下载可打印的订单：订购单（PDF）。</p>
-      </div>
-    </div>
-  </div>
-  <!-- //choose -->
-
-  <!-- 精选 -->
-  <div class="team">
-    <div class="container">
-      <div class="choiceness-title">
-        <h2>精选</h2>
-      </div>
-      <div class="agile_team_grids">
-        <div class="col-md-3 agile_team_grid">
-          <div class="agile_team_grid_main">
-            <img src="http://img.boqiicdn.com/Data/U/P/img91405b8f86335f8da.jpg" alt=" " class="img-responsive">
-            <div class="p-mask">
-              <ul class="top-links two">
-                <li><a href="#"><i class="fa fa-cart-arrow-down"></i></a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="agile_team_grid1">
-            <h3>* OFFER * 3 Cards for £5 (choose from 6 designs)</h3>
-            <p style="text-align: left;color:gray">The cards retail at £1.99 each, so buy 3 and save .97p!Choose any
-              3 cards - Six designs to choose fr..</p>
-            <p>£5.00</p>
-          </div>
-        </div>
-
-
-        <div class="col-md-3 agile_team_grid">
-          <div class="agile_team_grid_main">
-            <img src="http://img.boqiicdn.com/Data/U/P/img91405b8f86335f8da.jpg" alt=" " class="img-responsive">
-            <div class="p-mask">
-              <ul class="top-links two">
-                <li><a href="#"><i class="fa fa-cart-arrow-down"></i></a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="agile_team_grid1">
-            <h3>* OFFER * 3 Cards for £5 (choose from 6 designs)</h3>
-            <p style="text-align: left;color:gray">The cards retail at £1.99 each, so buy 3 and save .97p!Choose any
-              3 cards - Six designs to choose fr..</p>
-            <p>£5.00</p>
-          </div>
-        </div>
-
-
-        <div class="col-md-3 agile_team_grid">
-          <div class="agile_team_grid_main">
-            <img src="http://img.boqiicdn.com/Data/U/P/img91405b8f86335f8da.jpg" alt=" " class="img-responsive">
-            <div class="p-mask">
-              <ul class="top-links two">
-                <li><a href="#"><i class="fa fa-cart-arrow-down"></i></a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="agile_team_grid1">
-            <h3>* OFFER * 3 Cards for £5 (choose from 6 designs)</h3>
-            <p style="text-align: left;color:gray">The cards retail at £1.99 each, so buy 3 and save .97p!Choose any
-              3 cards - Six designs to choose fr..</p>
-            <p>£5.00</p>
-          </div>
-        </div>
-
-
-        <div class="col-md-3 agile_team_grid">
-          <div class="agile_team_grid_main">
-            <img src="http://img.boqiicdn.com/Data/U/P/img91405b8f86335f8da.jpg" alt=" " class="img-responsive">
-            <div class="p-mask">
-              <ul class="top-links two">
-                <li><a href="#"><i class="fa fa-cart-arrow-down"></i></a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="agile_team_grid1">
-            <h3>* OFFER * 3 Cards for £5 (choose from 6 designs)</h3>
-            <p style="text-align: left;color:gray">The cards retail at £1.99 each, so buy 3 and save .97p!Choose any
-              3 cards - Six designs to choose fr..</p>
-            <p>£5.00</p>
-          </div>
-        </div>
-
-        <div class="clearfix"></div>
-      </div>
-    </div>
-  </div>
-  <!-- //team -->
 </div>
-<!-- //about -->
+<!-- //Details -->
+
+
 <!-- footer -->
 <footer>
   <div class="container">
@@ -352,4 +278,16 @@
   });
 </script>
 <!-- //here ends scrolling icon -->
+<!--引入detail页面所需要的js-->
+<script type="text/javascript" src="js/cookie.js"></script>
+<script src="./js/ajax.js"></script>
+<script src="./js/zoom/jquery-1.11.0.min.js"></script>
+<script src="./js/zoom/jquery.exzoom.js"></script>
+<script type="text/javascript">
+  $("#exzoom").exzoom({
+    autoPlay: false,
+  });//方法调用，务必在加载完后执行
+</script>
+<script src="./js/details.js"></script>
+
 </body>
