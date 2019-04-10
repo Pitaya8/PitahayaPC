@@ -527,7 +527,7 @@ ul.dropdown-menu {
 /*-- //slider --*/
 /*-- banner-bottom --*/
 .welcome, .services, .news, footer, .team, .codes, .typography, .gallery, .blog, .contact-top {
-    padding: 4em 0;
+    /*padding: 4em 0;*/
 }
 
 .w3ls-heading h2, .w3ls-heading h3, .agileits-about-top-heading h3 {

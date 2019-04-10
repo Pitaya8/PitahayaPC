@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>ShopCart</title>
+  <title>Detail</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="utf-8">
   <meta name="keywords" content=""/>
@@ -45,19 +45,13 @@
   <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
   <![endif]-->
 
-  <!--  引入shopcart页面的less文件并解析-->
-  <link rel="stylesheet/less" type="text/css" href="css/shopcart.less">
+  <!--  引入good页面的less文件并解析-->
+  <link rel="stylesheet/less" type="text/css" href="css/good.less">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/3.8.1/less.min.js"></script>
-  <script type="text/javascript" src="js/cookie.js"></script>
-
-  <!--  引入iview -->
-  <link rel="stylesheet" type="text/css" href="http://unpkg.com/iview/dist/styles/iview.css">
-  <script type="text/javascript" src="http://v1.vuejs.org/js/vue.min.js"></script>
-  <script type="text/javascript" src="http://unpkg.com/iview@1.0.1/dist/iview.min.js"></script>
 </head>
 <body>
 <!-- banner -->
-<div id="ShopCart">
+<div class="">
   <div class="header">
     <div class="container">
       <div class="header-left">
@@ -88,8 +82,9 @@
                 <li><a href="index.html">首页</a></li>
                 <li><a href="about.html">关于</a></li>
                 <li class=""><a href="#" class="dropdown-toggle hvr-bounce-to-bottom" data-toggle="dropdown"
-                                role="button" aria-haspopup="true" aria-expanded="false">发布<span
-                  class="caret"></span></a>
+                                role="button" aria-haspopup="true" aria-expanded="false">
+                  发布<span class="caret"></span>
+                </a>
                   <ul class="dropdown-menu">
                     <li><a class="hvr-bounce-to-bottom" href="icons.html">Icons</a></li>
                     <li><a class="hvr-bounce-to-bottom" href="typography.html">Typography</a></li>
@@ -98,7 +93,7 @@
                 </li>
                 <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="blog.html">Blog</a></li>
-                <li><a href="good.html">商城</a></li>
+                <li><a class="active" href="good.html">商城</a></li>
                 <li><a href="support.html">支持</a></li>
                 <li><a href="contact.html">联系我们</a></li>
               </ul>
@@ -112,9 +107,9 @@
             <li><a href="log.html" title="登录"><i class="fa fa-user">登录</i></a></li>
             <li></li>
             <li><a href="register.html" title="注册"><i class="fa fa-registered">注册</i></a></li>
-<!--            <li><a href="#"><i class="fa fa-twitter"></i></a></li>-->
-<!--            <li><a href="#"><i class="fa fa-rss"></i></a></li>-->
-<!--            <li><a href="#"><i class="fa fa-vk"></i></a></li>-->
+            <!--            <li><a href="#"><i class="fa fa-twitter"></i></a></li>-->
+            <!--            <li><a href="#"><i class="fa fa-rss"></i></a></li>-->
+            <!--            <li><a href="#"><i class="fa fa-vk"></i></a></li>-->
           </ul>
         </div>
         <div class="clearfix"></div>
@@ -128,122 +123,72 @@
   <!--    </div>-->
   <!--  </div>-->
 </div>
-
+<!-- //banner -->
 <!-- about -->
-<div id="shop_cart_body">
-  <div class="container">
-    <h4>全部商品(0)</h4>
-    <div id="shop_cart_body_list">
-      <div id="shop_cart_body_list_top">
-        <ul>
-          <li>全选</li>
-          <li>商品信息</li>
-          <li></li>
-          <li>数量</li>
-          <li>小计（元）</li>
-          <li>操作</li>
-        </ul>
-      </div>
-      <!--      <div id="shop_cart_body_list_body">-->
-      <!--        <span>平台全场活动</span>-->
-      <!--        <span>活动</span>-->
-      <!--        请选择平台活动-->
+<div class="about">
+  <!-- about-top -->
+  <div class="agileits-about-top">
+    <div class="container">
+      <!--      <div class="agileits-about-top-heading">-->
+      <!--        <h3>Who we are</h3>-->
       <!--      </div>-->
-
-      <div id="shop_cart_body_lists">
-        <div class="shop_cart_body_list_content">
-          <h4>
-            一家店
-          </h4>
-          <div id="shop_cart_body_list_content_list">
-            <ul>
-              <li>
-                <input type="checkbox" class="good_check"/>
-                <img src="img/list-page/gl1.jpg"/>
-                <p>
-                  仅售上海 格力(GREE) 2匹变频 金贝 立柜式家用冷暖空调KFR-50LW/(50578)FNhAd-A1 皓雪白(WIFI)
-                </p>
-                <p>正1匹</p>
-                <p>￥12</p>
-                <span class="one_span">
-<!--                  <i-button type="ghost" class="cutnum" value="">-</i-button>-->
-                  									<button class="cutnum">-</button>
-<!--                  <script>-->
-<!--                    new Vue({-->
-<!--                      el: '#shop_cart_body_list_content_list'-->
-<!--                    })-->
-<!--                  </script>-->
-									<input type='text' class="number" value='1'>
-									</input>
-									<button class="addnum">+</button>
-								</span>
-                <span class="good_total">
-									￥12
-								</span>
-                <span class="del_li">删除</span>
-              </li>
-            </ul>
+      <div class="agileinfo-top-grids">
+        <div id="myCarousel" class="carousel slide">
+          <!-- 轮播（Carousel）指标 -->
+          <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+          </ol>
+          <!-- 轮播（Carousel）项目 -->
+          <div class="carousel-inner">
+            <div class="item active">
+              <img src="https://img.gzzhitu.com/zhitu-api/1554796860158.jpg"
+                   alt="First slide">
+            </div>
+            <div class="item">
+              <img src="https://img.gzzhitu.com/zhitu-api/1554796897236.jpg"
+                   alt="Second slide">
+            </div>
+            <div class="item">
+              <img src="https://img.gzzhitu.com/zhitu-api/1554796897236.jpg"
+                   alt="Third slide">
+            </div>
           </div>
+          <!-- 轮播（Carousel）导航 -->
+          <a class="carousel-control left" href="#myCarousel"
+             data-slide="prev"> <span _ngcontent-c3="" aria-hidden="true"
+                                      class="glyphicon glyphicon-chevron-left"></span></a>
+          <a class="carousel-control right" href="#myCarousel"
+             data-slide="next"><span _ngcontent-c3="" aria-hidden="true"
+                                     class="glyphicon glyphicon-chevron-right"></span></a>
         </div>
 
-        <div class="shop_cart_body_list_content">
-          <h4>
-            一家店
-          </h4>
-          <div id="shop_cart_body_list_content_list">
-            <ul>
-              <li>
-                <input type="checkbox" class="good_check"/>
-                <img src="img/list-page/gl1.jpg"/>
-                <p>
-                  仅售上海 格力(GREE) 2匹变频 金贝 立柜式家用冷暖空调KFR-50LW/(50578)FNhAd-A1 皓雪白(WIFI)
-                </p>
-                <p>正1匹</p>
-                <p>￥12</p>
-                <span class="one_span">
-<!--                  <i-button type="ghost" class="cutnum" value="">-</i-button>-->
-                  									<button class="cutnum">-</button>
-                  <!--                  <script>-->
-                  <!--                    new Vue({-->
-                  <!--                      el: '#shop_cart_body_list_content_list'-->
-                  <!--                    })-->
-                  <!--                  </script>-->
-									<input type='text' class="number" value='1'>
-									</input>
-									<button class="addnum">+</button>
-								</span>
-                <span class="good_total">
-									￥12
-								</span>
-                <span class="del_li">删除</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-
-    <div id="shop_cart_body_deal">
-      <div id="shop_cart_body_deal_left">
-        <input type="checkbox" id="quanxuan">
-        全选
-        <span>继续购物</span>
-        <span id="delall">删除所选</span>
-      </div>
-      <div id="shop_cart_body_deal_right">
-        <p>已选择<i>0</i>件商品&nbsp;总价(不含运费):<i>￥0.00</i>
-        <p>
-          <i-button type="error">去结算</i-button>
-          <script>
-            new Vue({
-              el: '#shop_cart_body_deal_right'
-            })
-          </script>
+        <!--        <div class="clearfix"> </div>-->
       </div>
     </div>
   </div>
+  <!-- //about-top -->
+
+  <!-- choose -->
+  <div class="">
+    <div class="container">
+      <div id="shopPageExplain">
+        <span>欢迎来到动物聊天店</span>
+        <ul>
+          <li>目前每年有超过10,000只被救出的猫和小猫，通过Cat Chat找到一个新家。</li>
+          <li>每次从我们的商店购买都可以帮助更多的猫从避难所进入家中。</li>
+          <li>感谢您的支持！</li>
+        </ul>
+
+        <p><strong>如何订购：</strong>点击上面的菜单找到你要找的东西 - 购物愉快！ </p>
+        <p><strong>通过信用卡/借记卡或PayPal付款：</strong>我们的商店由PayPal提供支持，可以接受所有主要的借记卡和信用卡以及PayPal。我们可以接受£Pounds
+          Sterling，€Euros或$ US Dollars。由于我们以英国为基础，价格以英镑为单位显示。要以欧元或美元显示价格，请从货币菜单中选择（左上角）。 </p>
+        <p><strong>支票支付：</strong>请在此处下载可打印的订单：订购单（PDF）。</p>
+      </div>
+    </div>
+  </div>
+  <!-- //choose -->
 
   <!-- 精选 -->
   <div class="team">
@@ -330,7 +275,6 @@
   <!-- //team -->
 </div>
 <!-- //about -->
-
 <!-- footer -->
 <footer>
   <div class="container">
@@ -352,7 +296,7 @@
         <div class="col-md-6 footer-grid-left">
           <ul>
             <li><a href="index.html">首页</a></li>
-            <li><a href="about.html">关于</a></li>
+            <li><a href="about.html">About</a></li>
             <li><a href="gallery.html">Gallery</a></li>
             <li><a href="icons.html">Icons</a></li>
           </ul>
@@ -362,7 +306,7 @@
             <li><a href="typography.html">Typography</a></li>
             <li><a href="blog.html">Blog</a></li>
             <li><a href="good.html">商城</a></li>
-                <li><a href="support.html">支持</a></li>
+            <li><a href="support.html">支持</a></li>
             <li><a href="contact.html">联系我们</a></li>
           </ul>
         </div>
@@ -409,6 +353,4 @@
   });
 </script>
 <!-- //here ends scrolling icon -->
-<script type="text/javascript" src="js/shop_cart.js"></script>
 </body>
-
