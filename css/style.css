@@ -392,7 +392,7 @@ ul.dropdown-menu {
 .callbacks_nav {
     position: absolute;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    top:45%;
+    top: 45%;
     left: 1em;
     z-index: 3;
     text-indent: -9999px;
@@ -479,7 +479,7 @@ ul.dropdown-menu {
 .callbacks_tabs {
     list-style: none;
     position: absolute;
-    bottom:1em;
+    bottom: 1em;
     left: 48%;
     padding: 0;
     margin: 0;
@@ -532,10 +532,14 @@ ul.dropdown-menu {
 
 .w3ls-heading h2, .w3ls-heading h3, .agileits-about-top-heading h3 {
     color: #2f2f2f;
-    font-size: 4em;
+    font-size: 2em;
     margin: 0;
     font-family: 'Raleway', sans-serif;
     font-weight: 600;
+}
+
+.w3ls-heading h3 {
+    font-size: 23px;
 }
 
 .welcome-grids {
@@ -1077,7 +1081,7 @@ footer {
 
 /*-- about-top --*/
 .agileits-about-top {
-    padding: 2em 0;
+    padding: 0 0 2em 0;
     background: #FFFFFF;
 }
 
@@ -1111,7 +1115,8 @@ footer {
 /*-- choose --*/
 .w3-agileits-choose {
     padding: 4em 0;
-    background: url(../images/1.jpg) no-repeat 0px 0px;
+    margin-bottom: 4em;
+    background: url(https://img.gzzhitu.com/zhitu-api/1554861628653.jpg) no-repeat 0px 0px;
     background-size: cover;
 }
 
@@ -2439,9 +2444,10 @@ ul.pagination {
 
 @media (max-width: 768px) {
     .callbacks_nav .next {
-        right:1em;
-        top:45%;
+        right: 1em;
+        top: 45%;
     }
+
     .callbacks_nav .prev {
         left: 1em;
         top: 45%;
@@ -2555,9 +2561,10 @@ ul.pagination {
     }
 
     .callbacks_nav .next {
-        right:1em;
-        top:45%;
+        right: 1em;
+        top: 45%;
     }
+
     .callbacks_nav .prev {
         left: 1em;
         top: 45%;
@@ -2590,9 +2597,10 @@ ul.pagination {
     }
 
     .callbacks_nav.next {
-        right:1em;
-        top:45%;
+        right: 1em;
+        top: 45%;
     }
+
     .callbacks_nav .prev {
         left: 1em;
         top: 45%;
@@ -2600,7 +2608,7 @@ ul.pagination {
 
     .callbacks_tabs {
         left: 48%;
-        bottom:1em;
+        bottom: 1em;
     }
 
     figure.effect-chico h4 {
@@ -2683,8 +2691,8 @@ ul.pagination {
     }
 
     .callbacks_tabs {
-        bottom:1em;
-        left:48%;
+        bottom: 1em;
+        left: 48%;
     }
 
     .banner {
@@ -2759,9 +2767,10 @@ ul.pagination {
     }
 
     .callbacks_nav.next {
-        right:1em;
-        top:45%;
+        right: 1em;
+        top: 45%;
     }
+
     .callbacks_nav .prev {
         left: 1em;
         top: 45%;
@@ -2787,9 +2796,10 @@ ul.pagination {
     }
 
     .callbacks_nav.next {
-        right:1em;
-        top:45%;
+        right: 1em;
+        top: 45%;
     }
+
     .callbacks_nav .prev {
         left: 1em;
         top: 45%;
