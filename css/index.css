@@ -1,0 +1,94 @@
+#overCurtain {
+  border-top: 1px solid #e6f5ff;
+  position: absolute;
+  height: 674px;
+  width: 100%;
+  left: 0px;
+  top: 0px;
+  opacity: 0.7;
+  display: none;
+  background-color: #e6f5ff;
+  z-index: 998;
+}
+.hide-center {
+  width: 355px;
+  height: 300px;
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+  display: none;
+  z-index: 999;
+}
+.hide-center #formhead {
+  width: 355px;
+  height: 42px;
+  margin: 0;
+  padding-top: 12px;
+  padding-bottom: -30px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color: #101010;
+}
+.hide-center #formhead #formhead-title {
+  width: 168px;
+  height: 24px;
+  color: #bfbfbf;
+  font-weight: 900;
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+}
+.hide-center #formhead #close {
+  width: 35px;
+  height: 20px;
+  border: 0;
+  border-radius: 20%;
+  background-color: #101010;
+  color: white;
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.hide-center #formbody {
+  width: 355px;
+  height: 245px;
+  background-color: #1e1e1e;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.hide-center #formbody .loginInput {
+  height: 52px;
+  width: 290px;
+  padding-left: 10px;
+  border: 0;
+  background-color: #141414;
+  color: aliceblue;
+}
+.hide-center #formbody .loginUserName {
+  padding-left: 30px;
+  padding-top: 30px;
+}
+.hide-center #formbody .loginUserName #input-topright-loginInput {
+  border-top-right-radius: 5px;
+}
+.hide-center #formbody .loginPassword {
+  padding-left: 30px;
+}
+.hide-center #formbody #formfoot {
+  margin-top: 30px;
+  margin-left: 30px;
+}
+.hide-center #formbody #formfoot #BSignIn {
+  display: block;
+  border-color: #dcdee2;
+  background-color: #fff;
+  color: #515a6e;
+  width: 90%;
+  height: 40px;
+  border-radius: 5px;
+}
+/*# sourceMappingURL=index.css.map */

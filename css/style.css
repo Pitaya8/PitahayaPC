@@ -484,7 +484,7 @@ ul.dropdown-menu {
     padding: 0;
     margin: 0;
     display: block;
-    z-index: 999;
+    z-index: 99;
 }
 
 .slider-top span {

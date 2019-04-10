@@ -1,0 +1,59 @@
+.supportPage {
+  box-sizing: border-box;
+}
+.supportPage .supportPageMain {
+  box-sizing: border-box;
+  padding-top: 20px;
+}
+.supportPage .supportPageMain h3 {
+  color: #8f00b8;
+  text-align: left;
+  font-size: 25px;
+  font-weight: 100;
+}
+.supportPage .supportPageMain .supportPageMain-describe .supportPageMain-p {
+  text-align: left;
+}
+.supportPage .supportPageMain .supportPageMain-describe .supportPageMain-p-one {
+  font-size: 18px;
+  color: #8f00b8;
+}
+.supportPage .supportPageMain .supportPageMain-describe .supportPageMain-p-two {
+  font-size: 14px;
+}
+.supportPage .supportPageMain .supportPageMain-describe .supportPageMain-p-three {
+  font-weight: 800;
+  font-size: 14px;
+}
+.supportPageMainBottom {
+  margin-bottom: 40px;
+  padding-top: 40px;
+}
+.supportPageMainBottom .container h2 {
+  color: #339900;
+  font-size: 20px;
+  font-weight: 800;
+}
+.supportPageMainBottom .container .supportPageMainBottomP span {
+  font-weight: 800;
+  font-size: 16px;
+  height: 40px;
+  line-height: 40px;
+}
+.supportPageMainBottom .container .supportPageMainBottomP p {
+  color: black;
+  font-size: 12px;
+  margin-bottom: 40px;
+}
+.supportPageMainBottom .container .supportPageMainBottomImg {
+  padding: 20px;
+}
+.supportPageMainBottom .container .supportPageMainBottomImg img {
+  width: 100%;
+}
+.supportPageMainBottom .container p {
+  color: #339900;
+  font-size: 20px;
+  font-weight: 800;
+}
+/*# sourceMappingURL=support.css.map */
