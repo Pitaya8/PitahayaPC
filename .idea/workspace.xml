@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="93776776-696a-480d-b41f-4d2e38326b8a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -20,8 +18,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/about.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="134">
-              <caret line="232" column="19" lean-forward="true" selection-start-line="232" selection-start-column="19" selection-end-line="232" selection-end-column="19" />
+            <state relative-caret-position="433">
+              <caret line="288" column="91" selection-start-line="288" selection-start-column="91" selection-end-line="288" selection-end-column="91" />
+              <folding>
+                <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -29,8 +31,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="1115" column="21" lean-forward="true" selection-start-line="1115" selection-start-column="21" selection-end-line="1115" selection-end-column="21" />
+            <state relative-caret-position="-102">
+              <caret line="1116" column="19" lean-forward="true" selection-start-line="1116" selection-start-column="19" selection-end-line="1116" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -47,7 +49,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>scroll</find>
       <find>gallery</find>
       <find>icon</find>
       <find>active</find>
@@ -77,7 +78,11 @@
       <find>overCurtain</find>
       <find>less</find>
       <find>about us</find>
+      <find>网页</find>
     </findStrings>
+    <replaceStrings>
+      <replace />
+    </replaceStrings>
     <dirStrings>
       <dir>F:\Pitaya8.github.io</dir>
     </dirStrings>
@@ -123,8 +128,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="304" />
-    <option name="y" value="110" />
+    <option name="x" value="93" />
+    <option name="y" value="114" />
     <option name="width" value="1558" />
     <option name="height" value="932" />
   </component>
@@ -139,11 +144,6 @@
             <path>
               <item name="Pitaya8.github.io" type="b2602c69:ProjectViewProjectNode" />
               <item name="Pitaya8.github.io" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Pitaya8.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Pitaya8.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Pitaya8.github.io" type="b2602c69:ProjectViewProjectNode" />
@@ -200,15 +200,15 @@
       <workItem from="1554255467833" duration="14450000" />
       <workItem from="1554692616800" duration="12725000" />
       <workItem from="1554858194773" duration="1029000" />
-      <workItem from="1554859238318" duration="2465000" />
+      <workItem from="1554859238318" duration="2743000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47838000" />
+    <option name="totallyTimeSpent" value="48116000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="304" y="110" width="1558" height="932" extended-state="0" />
+    <frame x="93" y="114" width="1558" height="932" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17171052" />
@@ -618,15 +618,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="1115" column="21" lean-forward="true" selection-start-line="1115" selection-start-column="21" selection-end-line="1115" selection-end-column="21" />
+        <state relative-caret-position="-102">
+          <caret line="1116" column="19" lean-forward="true" selection-start-line="1116" selection-start-column="19" selection-end-line="1116" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/about.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="232" column="19" lean-forward="true" selection-start-line="232" selection-start-column="19" selection-end-line="232" selection-end-column="19" />
+        <state relative-caret-position="433">
+          <caret line="288" column="91" selection-start-line="288" selection-start-column="91" selection-end-line="288" selection-end-column="91" />
+          <folding>
+            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
+          </folding>
         </state>
       </provider>
     </entry>
