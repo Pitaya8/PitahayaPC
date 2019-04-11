@@ -44,9 +44,42 @@
   <!--[if lt IE 9]>
   <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
   <![endif]-->
+<!--  toastr-->
+  <link rel="stylesheet" href="css/toastr/toastr.css">
+  <script src="js/toastr/toastr.js"></script>
+<!--  //toastr-->
   <link rel="stylesheet" href="css/single.css">
+  <link rel="stylesheet" href="./css/index.css">
+
+
 </head>
 <body>
+<!--登录弹窗-->
+<div id="overCurtain"></div>
+<div class="hide-center">
+  <div id="formhead">
+    <div id="formhead-title">
+      用户登录
+    </div>
+    <button type="button" id="close">x</button>
+  </div>
+  <div id="formbody">
+    <div class="loginUserName">
+      <input id="input-topright-loginInput" name="userName" class="loginInput" placeholder="账号" type="text"
+             value="">
+    </div>
+    <div class="loginPassword">
+      <input id="input-bottomright-loginInput" name="password" class="loginInput" placeholder="密码" type="password"
+             style="border-bottom-right-radius:5px;">
+    </div>
+    <div id="formfoot">
+      <button id="BSignIn" type="submit">登录</button>
+    </div>
+  </div>
+</div>
+<!--//登录弹窗-->
+
+
 <!-- banner -->
 <div class="banner about-banner">
   <div class="header about-header">
@@ -100,9 +133,8 @@
         </div>
         <div class="agileinfo-social-grids">
           <ul>
-            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-            <li><a href="log.html" title="个人中心"><i class="fa fa-user"></i></a></li>
-            <li><a href="log.html" title="登录"><i class="fa fa-user">登录</i></a></li>
+            <li><a title="个人中心" id="personalInfo"><i class="fa fa-user">个人中心</i></a></li>
+            <li><a title="登录" id="login"><i class="fa fa-user">登录</i></a></li>
             <li></li>
             <li><a href="register.html" title="注册"><i class="fa fa-registered">注册</i></a></li>
           </ul>
@@ -118,44 +150,44 @@
 <!--	slider-->
 <div class="w3layouts-banner-slider">
   <div class="container">
-<!--    <div class="slider">-->
-<!--      <div class="callbacks_container">-->
-<!--        <ul class="rslides callbacks callbacks1" id="slider4">-->
-<!--          <li>-->
-<!--            <div class="agileits-banner-info">-->
-<!--              <img src="images/b1.jpg" height="" width="100%"/>-->
-<!--              &lt;!&ndash;                <h3>Lorem ipsum dolor sit amet <span>Nulla massa magna</span></h3>&ndash;&gt;-->
-<!--            </div>-->
-<!--          </li>-->
-<!--          <li>-->
-<!--            <div class="agileits-banner-info">-->
-<!--              <img src="images/b2.jpg" height="" width="100%"/>-->
-<!--            </div>-->
-<!--          </li>-->
-<!--        </ul>-->
-<!--      </div>-->
-<!--      <script src="js/responsiveslides.min.js"></script>-->
-<!--      <script>-->
-<!--        // You can also use "$(window).load(function() {"-->
-<!--        $(function () {-->
-<!--          // Slideshow 4-->
-<!--          $("#slider4").responsiveSlides({-->
-<!--            auto: true,-->
-<!--            pager: true,-->
-<!--            nav: true,-->
-<!--            speed: 500,-->
-<!--            namespace: "callbacks",-->
-<!--            before: function () {-->
-<!--              $('.events').append("<li>before event fired.</li>");-->
-<!--            },-->
-<!--            after: function () {-->
-<!--              $('.events').append("<li>after event fired.</li>");-->
-<!--            }-->
-<!--          });-->
-<!--        });-->
-<!--      </script>-->
-<!--      &lt;!&ndash;banner Slider starts Here&ndash;&gt;-->
-<!--    </div>-->
+    <!--    <div class="slider">-->
+    <!--      <div class="callbacks_container">-->
+    <!--        <ul class="rslides callbacks callbacks1" id="slider4">-->
+    <!--          <li>-->
+    <!--            <div class="agileits-banner-info">-->
+    <!--              <img src="images/b1.jpg" height="" width="100%"/>-->
+    <!--              &lt;!&ndash;                <h3>Lorem ipsum dolor sit amet <span>Nulla massa magna</span></h3>&ndash;&gt;-->
+    <!--            </div>-->
+    <!--          </li>-->
+    <!--          <li>-->
+    <!--            <div class="agileits-banner-info">-->
+    <!--              <img src="images/b2.jpg" height="" width="100%"/>-->
+    <!--            </div>-->
+    <!--          </li>-->
+    <!--        </ul>-->
+    <!--      </div>-->
+    <!--      <script src="js/responsiveslides.min.js"></script>-->
+    <!--      <script>-->
+    <!--        // You can also use "$(window).load(function() {"-->
+    <!--        $(function () {-->
+    <!--          // Slideshow 4-->
+    <!--          $("#slider4").responsiveSlides({-->
+    <!--            auto: true,-->
+    <!--            pager: true,-->
+    <!--            nav: true,-->
+    <!--            speed: 500,-->
+    <!--            namespace: "callbacks",-->
+    <!--            before: function () {-->
+    <!--              $('.events').append("<li>before event fired.</li>");-->
+    <!--            },-->
+    <!--            after: function () {-->
+    <!--              $('.events').append("<li>after event fired.</li>");-->
+    <!--            }-->
+    <!--          });-->
+    <!--        });-->
+    <!--      </script>-->
+    <!--      &lt;!&ndash;banner Slider starts Here&ndash;&gt;-->
+    <!--    </div>-->
 
     <div class="show-img">
       <img src="images/g1.jpg"/></div>
@@ -185,7 +217,9 @@
             <span>状态</span>
           </p>
           <div class="cart-bottom">
-            <i class="fa fa-star-o attention-start-btn" aria-hidden="true"></i>
+            <span onclick="payattention(this)">
+              <i class="fa fa-star-o attention-start-btn" aria-hidden="true"></i>
+            </span>
             <span class="attention-mes">关注</span>
             <button class="apply-btn">
               <span>申请领养</span>
@@ -233,7 +267,7 @@
           提醒：如送养人向你索要运费（100%诈骗），治疗费等，切勿付款！请务必联系审核员chongwubang2019核实，以免被骗。
         </p>
         <div class="attention">
-<!--          <i class="fa fa-star-o" aria-hidden="true"></i>-->
+          <!--          <i class="fa fa-star-o" aria-hidden="true"></i>-->
           <i class="fa fa-star attention-start" aria-hidden="true"></i><span>关注</span>
         </div>
         <div class="attention-head-img">
@@ -285,7 +319,8 @@
     <div class="agileits-w3layouts-footer-grids">
       <div class="col-md-4 footer-left">
         <h3>
-          <a href="index.html"><img src="https://img.gzzhitu.com/zhitu-api/1554961200037.png" alt="" class="logo" style="width:100%"></a>
+          <a href="index.html"><img src="https://img.gzzhitu.com/zhitu-api/1554961200037.png" alt="" class="logo"
+                                    style="width:100%"></a>
         </h3>
         <div class="footer-social-grids">
           <ul style="text-align: center;">
@@ -311,12 +346,12 @@
         <div class="clearfix"></div>
       </div>
       <div class="col-md-4 footer-left">
-<!--        <h4>通讯</h4>-->
-<!--        <p>描述问题</p>-->
-<!--        <form action="#" method="post">-->
-<!--          <input type="email" placeholder="Subscribe" name="Subscribe" required="">-->
-<!--          <button class="btn1">发送</button>-->
-<!--        </form>-->
+        <!--        <h4>通讯</h4>-->
+        <!--        <p>描述问题</p>-->
+        <!--        <form action="#" method="post">-->
+        <!--          <input type="email" placeholder="Subscribe" name="Subscribe" required="">-->
+        <!--          <button class="btn1">发送</button>-->
+        <!--        </form>-->
         <div class="col-md-6 footer-grid-left">
           <ul>
             <li><a href="good.html">商城</a></li>
@@ -362,5 +397,20 @@
   });
 </script>
 <!-- //here ends scrolling icon -->
+
 </body>
 </html>
+<script src="js/single.js"></script>
+<script>
+  // function payattention(target){
+  //   if(target.children[0].className=="fa fa-star attention-start-btn"){
+  //     target.children[0].className="fa fa-star-o attention-start-btn"
+  //
+  //   }else{
+  //     target.children[0].className="fa fa-star attention-start-btn"
+  //   }
+  // }
+
+</script>
+<!--登录弹窗-->
+<script src="js/login.js"></script>

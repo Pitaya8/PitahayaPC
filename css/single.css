@@ -30,9 +30,11 @@
   font-size: 1.5em;
   vertical-align: middle;
   cursor: pointer;
+  color: #F44336;
 }
 .w3layouts-banner-slider .container .Card .card .cart-bottom .attention-mes {
   vertical-align: middle;
+  color: #F44336;
 }
 .w3layouts-banner-slider .container .Card .card .cart-bottom .apply-btn {
   padding: 1px 11px;

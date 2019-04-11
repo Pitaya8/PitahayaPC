@@ -46,10 +46,36 @@
   <![endif]-->
 
   <!--  引入good页面的less文件并解析-->
-  <link rel="stylesheet/less" type="text/css" href="css/good.less">
+  <link rel="stylesheet" href="css/good.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/3.8.1/less.min.js"></script>
+  <link rel="stylesheet" href="./css/index.css">
 </head>
 <body>
+<!--登录弹窗-->
+<div id="overCurtain"></div>
+<div class="hide-center">
+  <div id="formhead">
+    <div id="formhead-title">
+      用户登录
+    </div>
+    <button type="button" id="close">x</button>
+  </div>
+  <div id="formbody">
+    <div class="loginUserName">
+      <input id="input-topright-loginInput" name="userName" class="loginInput" placeholder="账号" type="text"
+             value="">
+    </div>
+    <div class="loginPassword">
+      <input id="input-bottomright-loginInput" name="password" class="loginInput" placeholder="密码" type="password"
+             style="border-bottom-right-radius:5px;">
+    </div>
+    <div id="formfoot">
+      <button id="BSignIn" type="submit">登录</button>
+    </div>
+  </div>
+</div>
+<!--//登录弹窗-->
+
 <!-- banner -->
 <div class="">
   <div class="header">
@@ -103,8 +129,8 @@
         </div>
         <div class="agileinfo-social-grids">
           <ul>
-            <li><a href="log.html" title="个人中心"><i class="fa fa-user"></i></a></li>
-            <li><a href="log.html" title="登录"><i class="fa fa-user">登录</i></a></li>
+            <li><a title="个人中心" id="personalInfo"><i class="fa fa-user">个人中心</i></a></li>
+            <li><a title="登录" id="login"><i class="fa fa-user">登录</i></a></li>
             <li></li>
             <li><a href="register.html" title="注册"><i class="fa fa-registered">注册</i></a></li>
 <!--            <li><a href="#"><i class="fa fa-twitter"></i></a></li>-->
@@ -152,7 +178,7 @@
         </div>
       </li>
       <li class="category-list-li">
-        <a href="#"><span>笔记本<span></a>
+        <a href="#"><span>笔记本</span></a>
         <div class="contents">
           <ul class="good-list">
             <li><img src="./images/index_sidenav_notebook1.jpg">小米笔记本</li>
@@ -282,7 +308,7 @@
         </div>
       </li>
       <li class="category-list-li">
-        <a href="#"><span>米兔</span> <span>服装</a>
+        <a href="#"><span>米兔</span> <span>服装</span></a>
         <div class="contents">
           <ul class="good-list">
             <li><img src="./images/index_sidenav_rubit1.jpg">米兔</li>
@@ -466,10 +492,10 @@
     <div class="agileits-w3layouts-footer-grids">
       <div class="col-md-4 footer-left">
         <h3>
-          <a href="index.html"><img src="https://img.gzzhitu.com/zhitu-api/1554961200037.png" alt="" class="logo" style="width:100%"></a>
+          <a href="index.html">Cat <span>Club</span></a>
         </h3>
         <div class="footer-social-grids">
-          <ul style="text-align: center;">
+          <ul>
             <li><a href="#"><i class="fa fa-facebook"></i></a></li>
             <li><a href="#"><i class="fa fa-twitter"></i></a></li>
             <li><a href="#"><i class="fa fa-rss"></i></a></li>
@@ -477,39 +503,33 @@
         </div>
       </div>
       <div class="col-md-4 footer-left">
+        <h4>Navigation</h4>
         <div class="col-md-6 footer-grid-left">
           <ul>
-            <li><a class="active" href="index.html">首页</a></li>
-            <li><a href="about.html">关于</a></li>
+            <li><a href="index.html">首页</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="gallery.html">画廊</a></li>
+            <li><a href="icons.html">Icons</a></li>
           </ul>
         </div>
         <div class="col-md-6 footer-grid-left">
           <ul>
-            <li><a href="gallery.html">画廊</a></li>
-            <li><a href="publish.html">发布救助</a></li>
+            <li><a href="typography.html">Typography</a></li>
+            <li><a href="blog.html">待救助</a></li>
+            <li><a href="good.html">商城</a></li>
+            <li><a href="support.html">支持</a></li>
+            <li><a href="contact.html">联系我们</a></li>
           </ul>
         </div>
         <div class="clearfix"></div>
       </div>
       <div class="col-md-4 footer-left">
-        <!--        <h4>通讯</h4>-->
-        <!--        <p>描述问题</p>-->
-        <!--        <form action="#" method="post">-->
-        <!--          <input type="email" placeholder="Subscribe" name="Subscribe" required="">-->
-        <!--          <button class="btn1">发送</button>-->
-        <!--        </form>-->
-        <div class="col-md-6 footer-grid-left">
-          <ul>
-            <li><a href="good.html">商城</a></li>
-            <li><a href="blog.html">待救助</a></li>
-          </ul>
-        </div>
-        <div class="col-md-6 footer-grid-left">
-          <ul>
-            <li><a href="support.html">支持</a></li>
-            <li><a href="contact.html">联系我们</a></li>
-          </ul>
-        </div>
+        <h4>Newsletter</h4>
+        <p>Subscribe With Us</p>
+        <form action="#" method="post">
+          <input type="email" placeholder="Subscribe" name="Subscribe" required="">
+          <button class="btn1">Go</button>
+        </form>
       </div>
       <div class="clearfix"></div>
     </div>
@@ -545,3 +565,5 @@
 </script>
 <!-- //here ends scrolling icon -->
 </body>
+<!--登录弹窗-->
+<script src="js/login.js"></script>

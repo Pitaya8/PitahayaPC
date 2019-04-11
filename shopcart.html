@@ -56,6 +56,32 @@
   <script type="text/javascript" src="http://unpkg.com/iview@1.0.1/dist/iview.min.js"></script>
 </head>
 <body>
+<!--登录弹窗-->
+<div id="overCurtain"></div>
+<div class="hide-center">
+  <div id="formhead">
+    <div id="formhead-title">
+      用户登录
+    </div>
+    <button type="button" id="close">x</button>
+  </div>
+  <div id="formbody">
+    <div class="loginUserName">
+      <input id="input-topright-loginInput" name="userName" class="loginInput" placeholder="账号" type="text"
+             value="">
+    </div>
+    <div class="loginPassword">
+      <input id="input-bottomright-loginInput" name="password" class="loginInput" placeholder="密码" type="password"
+             style="border-bottom-right-radius:5px;">
+    </div>
+    <div id="formfoot">
+      <button id="BSignIn" type="submit">登录</button>
+    </div>
+  </div>
+</div>
+<!--//登录弹窗-->
+
+
 <!-- banner -->
 <div id="ShopCart">
   <div class="header">
@@ -108,13 +134,10 @@
         </div>
         <div class="agileinfo-social-grids">
           <ul>
-            <li><a href="log.html" title="个人中心"><i class="fa fa-user"></i></a></li>
-            <li><a href="log.html" title="登录"><i class="fa fa-user">登录</i></a></li>
+            <li><a title="个人中心" id="personalInfo"><i class="fa fa-user">个人中心</i></a></li>
+            <li><a title="登录" id="login"><i class="fa fa-user">登录</i></a></li>
             <li></li>
             <li><a href="register.html" title="注册"><i class="fa fa-registered">注册</i></a></li>
-<!--            <li><a href="#"><i class="fa fa-twitter"></i></a></li>-->
-<!--            <li><a href="#"><i class="fa fa-rss"></i></a></li>-->
-<!--            <li><a href="#"><i class="fa fa-vk"></i></a></li>-->
           </ul>
         </div>
         <div class="clearfix"></div>

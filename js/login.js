@@ -1,4 +1,6 @@
+let status=1;
 $(function () {
+  console.log('页面')
  $('#overCurtain').css('height',$(document).height()+'px')
 
 });
@@ -13,3 +15,9 @@ $("#close").click(function () {
   // $(".overCurtain").fadeOut("slow")
   $('#overCurtain').css('display','none')
 })
+if(status){
+  $('#personalInfo').css('display','none');
+}else{
+  $('#personalInfo').css('display','inline-block');
+  $("#login").css('display','none')
+}
