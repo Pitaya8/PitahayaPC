@@ -7,6 +7,9 @@
 .w3layouts-banner-slider .container .slider {
   flex: 1;
 }
+.w3layouts-banner-slider .container .show-img {
+  flex: 1;
+}
 .w3layouts-banner-slider .container .Card {
   flex: 1;
   background: #eeeeee;
@@ -21,6 +24,34 @@
 }
 .w3layouts-banner-slider .container .Card .card .cart-bottom {
   border-top: 1px solid #e8eaec;
+  padding-top: 1em;
+}
+.w3layouts-banner-slider .container .Card .card .cart-bottom .attention-start-btn {
+  font-size: 1.5em;
+  vertical-align: middle;
+  cursor: pointer;
+}
+.w3layouts-banner-slider .container .Card .card .cart-bottom .attention-mes {
+  vertical-align: middle;
+}
+.w3layouts-banner-slider .container .Card .card .cart-bottom .apply-btn {
+  padding: 1px 11px;
+  color: #fff;
+  background-color: #2d8cf0;
+  border-color: #2d8cf0;
+  border-radius: 4px;
+  font-size: 12px;
+  cursor: pointer;
+  vertical-align: middle;
+  margin-bottom: 0;
+  font-weight: 400;
+  text-align: center;
+  margin-left: 4em;
+  line-height: 1.5;
+}
+.w3layouts-banner-slider .container .Card .card .cart-bottom .apply-btn:hover {
+  background-color: #57a3f3;
+  border-color: #57a3f3;
 }
 .w3layouts-banner-slider .container .Card .card .cart-head {
   border-bottom: 1px solid #e8eaec;
