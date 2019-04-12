@@ -9,6 +9,9 @@
   width: 4em;
 }
 .publish-top .container .publishContent .form-group #drop_area {
-  height: 200px;
+  height: 178px;
+}
+.publish-top .container .publishContent .form-group #drop_area #preview img {
+  height: 178px;
 }
 /*# sourceMappingURL=publish.css.map */

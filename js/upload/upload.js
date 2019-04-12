@@ -4,7 +4,7 @@ function DragImgUpload(id,options) {
         boxWidth:'200px',
         boxHeight:'auto'
     }
-    this.preview = $('<div id="preview"><img src="img/upload.png" class="img-responsive"  style="width: 100%;height: auto;" alt="" title=""> </div>');
+    this.preview = $('<div id="preview"><img src="https://img.gzzhitu.com/zhitu-api/1555062407614.jpg" class="img-responsive"  style="width: 100%;height: auto;" alt="" title=""> </div>');
     this.opts=$.extend(true, defaultOpt,{
     }, options);
     this.init();
