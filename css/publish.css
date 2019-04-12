@@ -1,0 +1,14 @@
+.publish-top .container .publishContent {
+  margin: 0 auto;
+  width: 80%;
+}
+.publish-top .container .publishContent .form-group {
+  display: flex;
+}
+.publish-top .container .publishContent .form-group .control-label {
+  width: 4em;
+}
+.publish-top .container .publishContent .form-group #drop_area {
+  height: 200px;
+}
+/*# sourceMappingURL=publish.css.map */

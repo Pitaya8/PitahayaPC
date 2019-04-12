@@ -44,10 +44,15 @@
   <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
   <![endif]-->
 
-  <!--  图片上传的css和js-->
-  <link rel="stylesheet" href="css/bootstrap-fileinput.css">
-  <script src="js/bootstrap-fileinput.js"></script>
+  <!--  引入publish页面的css-->
+  <link rel="stylesheet" href="css/publish.css">
   <link rel="stylesheet" href="./css/index.css">
+
+  <!--  引入头像上传的js-->
+  <script src="js/upload/jquery.js"></script>
+  <script src="js/upload/upload.js"></script>
+
+
 </head>
 <body>
 <!--登录弹窗-->
@@ -147,93 +152,28 @@
 </div>
 <!-- //banner -->
 <!-- contact -->
-<div class="contact-top">
+<div class="publish-top">
   <!-- container -->
   <div class="container">
     <!--    <div class="map">-->
     <!--      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d158858.18237072596!2d-0.10159865000003898!3d51.52864165000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1436514341845" allowfullscreen></iframe>-->
     <!--    </div>-->
-    <div class="">
+    <div class="publishContent">
       <div class="">
-        <div class="form-group">
-          <div class="col-md-8">
-            <div class="fileinput fileinput-new" data-provides="fileinput" id="uploadImageDiv">
-              <div class="fileinput-new thumbnail" style="width: 200px; height: 150px;">
-                <img src="${companyInfo.image}" alt=""/>
-              </div>
-              <div class="fileinput-preview fileinput-exists thumbnail"
-                   style="max-width: 200px; max-height: 150px;"></div>
-              <div>
-                        <span class="btn default btn-file"> <span
-                          class="fileinput-new">选择图片</span> <span class="fileinput-exists">更改</span> <input type="file"
-                                                                                                            name="uploadImage"
-                                                                                                            id="uploadImage"/></span>
-                <a href="#" class="btn default fileinput-exists" data-dismiss="fileinput">移除</a>
-                <span>请选择1M以内图片</span>
-              </div>
-            </div>
-            <div id="titleImageError" style="color: #a94442"></div>
-          </div>
-        </div>
-        <script>
-          var url = '';
-          $("#uploadImage").fileupload({
-            url: ROOT + "/security/company/uploadFile",
-            dataType: 'json',
-            autoUpload: false,
-            acceptFileTypes: /(gif|jpe?g|png)$/i,
-            maxFileSize: 1000000, // 1 MB
-            imageMaxWidth: 100,
-            imageMaxHeight: 100,
-            messages: {
-              acceptFileTypes: '文件类型不匹配',
-              maxFileSize: '文件过大',
-              minFileSize: '文件过小'
-            }
-          }).on("fileuploadadd", function (e, data) {
-            // 当文件添加上去时候调用
-            $("#titleImageError").html("");
-            data.submit()
-          }).on("fileuploaddone", function (e, data) {
-            // 上传完成时调用
-            if (data.result.returnState == "ERROR") {
-              alert("上传失败")
-              return;
-            }
-            url = data.result.returnData.url;
-          });
+        <div class="form-group has-success  ">
+          <label class="control-label">头像：</label>
 
-          function updateMsg() {
-            $.ajax({
-              url: ROOT + "/security/company/updateInfo",
-              data: {
-                id: $("#companyId").val(),
-                image: url,
-                companyName: $("#companyName").val(),
-                companySite: $("#companySite").val(),
-                companyLinker: $("#companyLinker").val(),
-                companyTel: $("#companyTel").val()
-              },
-              type: "post",
-              success: function (data) {
-                if (data.returnState == "OK") {
-                  layer.msg('操作成功', {
-                    icon: 6,
-                    shade: 0.01,
-                    offset: ['57px', '1100px']
-                  });
-                  $table.bootstrapTable('refresh');
-                } else {
-                  layer.msg('操作失败', {
-                    icon: 5,
-                    shade: 0.01,
-                    offset: ['90px', '900px']
-                  });
-                }
+          <div id="drop_area" style="height:200px"></div>
+          <script type="text/javascript">
+            let dragImgUpload = new DragImgUpload("#drop_area", {
+              callback: function (files) {
+                //回调函数，可以传递给后台等等
+                let file = files[0];
+                console.log(file.name);
               }
-            });
-          }
-        </script>
+            })
+          </script>
+        </div>
 
 
         <div class="form-group has-success has-feedback ">
