@@ -45,15 +45,16 @@
   <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
   <![endif]-->
 
-  <!--  引入shopcart页面的less文件并解析-->
-  <link rel="stylesheet/less" type="text/css" href="css/shopcart.less">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/3.8.1/less.min.js"></script>
+  <!--  引入shopcart页面的css文件并解析-->
+  <link rel="stylesheet" href="css/shopcart.css">
   <script type="text/javascript" src="js/cookie.js"></script>
 
   <!--  引入iview -->
   <link rel="stylesheet" type="text/css" href="http://unpkg.com/iview/dist/styles/iview.css">
   <script type="text/javascript" src="http://v1.vuejs.org/js/vue.min.js"></script>
   <script type="text/javascript" src="http://unpkg.com/iview@1.0.1/dist/iview.min.js"></script>
+
+  <link rel="stylesheet" href="./css/index.css">
 </head>
 <body>
 <!--登录弹窗-->
@@ -136,8 +137,8 @@
           <ul>
             <li><a title="个人中心" id="personalInfo"><i class="fa fa-user">个人中心</i></a></li>
             <li><a title="登录" id="login"><i class="fa fa-user">登录</i></a></li>
-            <li></li>
-            <li><a href="register.html" title="注册"><i class="fa fa-registered">注册</i></a></li>
+            <li><a href="#" title="退出" id="signout"><i class="fa fa-sign-out">退出</i></a></li>
+            <li><a href="register.html" title="注册" id="register"><i class="fa fa-registered">注册</i></a></li>
           </ul>
         </div>
         <div class="clearfix"></div>
@@ -433,4 +434,6 @@
 <!-- //here ends scrolling icon -->
 <script type="text/javascript" src="js/shop_cart.js"></script>
 </body>
+<!--登录弹窗-->
+<script src="js/login.js"></script>
 
