@@ -57,6 +57,10 @@
   <link rel="stylesheet" href="./css/index.css">
   <script type="text/javascript" src="js/cookie.js"></script>
 
+  <!--  引入carousel样式-->
+  <link rel="stylesheet" href="css/carousel/carousel.css">
+
+
 </head>
 <body>
 <!--登录弹窗-->
@@ -317,23 +321,72 @@
   </div>
 </div>
 <!-- //services -->
-<!-- news -->
+
+<!--轮播图-->
+<div class="showCarousel">
+  <section class="jq22-container">
+    <div class="container">
+      <div class="w3ls-heading">
+        <h3>寻家</h3>
+      </div>
+      <div id="full" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <ul class="row item active">
+            <li class="col-xs-4">
+              <a href="index.html"><img src="http://placehold.it/200/6dc066/ffffff&text=1"
+                   srcset="http://placehold.it/200/6dc066/ffffff&text=1 1x, http://placehold.it/400/6dc066/ffffff&text=1 2x"
+                   class="img-responsive"></a>
+            </li>
+            <li class="col-xs-4">
+              <img src="http://placehold.it/200/6dc066/ffffff&text=2"
+                   srcset="http://placehold.it/200/6dc066/ffffff&text=2 1x, http://placehold.it/400/6dc066/ffffff&text=2 2x"
+                   class="img-responsive">
+            </li>
+            <li class="col-xs-4">
+              <img src="http://placehold.it/200/6dc066/ffffff&text=3"
+                   srcset="http://placehold.it/200/6dc066/ffffff&text=3 1x, http://placehold.it/400/6dc066/ffffff&text=3 2x"
+                   class="img-responsive">
+            </li>
+          </ul>
+          <ul class="row item">
+            <li class="col-xs-4">
+              <img src="http://placehold.it/200/6dc066/ffffff&text=4"
+                   srcset="http://placehold.it/200/6dc066/ffffff&text=4 1x, http://placehold.it/400/6dc066/ffffff&text=4 2x"
+                   class="img-responsive">
+            </li>
+            <li class="col-xs-4">
+              <img src="http://placehold.it/200/6dc066/ffffff&text=5"
+                   srcset="http://placehold.it/200/6dc066/ffffff&text=5 1x, http://placehold.it/400/6dc066/ffffff&text=5 2x"
+                   class="img-responsive">
+            </li>
+            <li class="col-xs-4">
+              <img src="http://placehold.it/200/6dc066/ffffff&text=6"
+                   srcset="http://placehold.it/200/6dc066/ffffff&text=6 1x, http://placehold.it/400/6dc066/ffffff&text=6 2x"
+                   class="img-responsive">
+            </li>
+          </ul>
+        </div>
+
+        <a class="carousel-control left" href="#full" data-slide="prev">Previous</a>
+        <a class="carousel-control right" href="#full" data-slide="next">Next</a>
+      </div>
+    </div>
+  </section>
+</div>
+<!--//轮播图-->
+
+<!-- 故事 -->
 <div class="news">
   <div class="container">
     <div class="w3ls-heading">
-      <h3>News & Events</h3>
+      <h3>故事</h3>
     </div>
     <div class="w3-agileits-news-grids">
       <div class="col-md-6 news-left">
         <div class="w3-agile-news-date">
           <div class="agile-news-icon">
             <i class="fa fa-calendar" aria-hidden="true"></i>
-            <p>Nov 24</p>
-          </div>
-          <div class="agileits-line"></div>
-          <div class="agile-news-icon">
-            <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i></a>
-            <p>2 comments</p>
+            <p>11月24日</p>
           </div>
           <div class="agileits-line"></div>
           <div class="agile-news-icon">
@@ -344,9 +397,6 @@
         <div class="w3-agile-news-img">
           <a href="single.html"><img src="images/4.jpg" alt=""/></a>
           <h4><a href="single.html">Pellentesque habitant morbi tristique senectus et netus et malesuada fames</a></h4>
-          <p>Donec justo ante, maximus et aliquam et, elementum ac purus. Nam eget ante ac velit laoreet sodales ut vel
-            nibh. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sed quam nibh. In sed nisi enim. Duis
-            eget nunc vitae elit dignissim feugiat. Morbi molestie fringilla ipsum, id molestie dolor sodales vel.</p>
         </div>
         <div class="clearfix"></div>
       </div>
@@ -357,34 +407,21 @@
           <p>Ut rutrum convallis erat at malesuada. Donec facilisis sem nisl, ut rhoncus ex ullamcorper ornare. Ut ac
             interdum velit. Cras nulla nibh, rutrum non venenatis sit amet, ullamcorper venenatis felis.</p>
         </div>
-        <div class="news-right-grid">
-          <a href="single.html">Phasellus sapien eros, condimentum quis</a>
-          <h5>17th Nov,2016</h5>
-          <p>Ut rutrum convallis erat at malesuada. Donec facilisis sem nisl, ut rhoncus ex ullamcorper ornare. Ut ac
-            interdum velit. Cras nulla nibh, rutrum non venenatis sit amet, ullamcorper venenatis felis.</p>
-        </div>
-        <div class="news-right-grid">
-          <a href="single.html">Donec justo ante, maximus et aliquam et</a>
-          <h5>29th Nov,2016</h5>
-          <p>Ut rutrum convallis erat at malesuada.
-            <wbr>
-            Donec facilisis sem nisl, ut rhoncus ex ullamcorper ornare. Ut ac interdum velit. Cras nulla nibh, rutrum
-            non venenatis sit amet, ullamcorper venenatis felis.
-          </p>
-        </div>
       </div>
       <div class="clearfix"></div>
     </div>
   </div>
 </div>
-<!-- //news -->
+<!-- //故事 -->
+
 <!-- footer -->
 <footer>
   <div class="container">
     <div class="agileits-w3layouts-footer-grids">
       <div class="col-md-4 footer-left">
         <h3>
-          <a href="index.html"><img src="https://img.gzzhitu.com/zhitu-api/1554961200037.png" alt="" class="logo" style="width:100%"></a>
+          <a href="index.html"><img src="https://img.gzzhitu.com/zhitu-api/1554961200037.png" alt="" class="logo"
+                                    style="width:100%"></a>
         </h3>
         <div class="footer-social-grids">
           <ul style="text-align: center;">
@@ -469,3 +506,5 @@
 <script src="js/login.js"></script>
 </body>
 </html>
+<!--引入calousel的js-->
+<script src="js/carousel/carousel.js"></script>

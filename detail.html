@@ -51,6 +51,8 @@
   <link rel="stylesheet" href="./css/details/jquery.exzoom.css">
   <link rel="stylesheet" href="./css/details/normalize.css">
 
+  <link rel="stylesheet" href="./css/index.css">
+
 </head>
 <body>
 <!--登录弹窗-->
@@ -216,20 +218,21 @@
       <div id="details_body_imgbody_body">
         <img src="images/1.jpg"/>
         <img src="images/1.jpg"/>
+      </div>
     </div>
+
   </div>
-
-</div>
-<!-- //Details -->
+  <!-- //Details -->
 
 
-<!-- footer -->
+  <!-- footer -->
   <footer>
     <div class="container">
       <div class="agileits-w3layouts-footer-grids">
         <div class="col-md-4 footer-left">
           <h3>
-            <a href="index.html"><img src="https://img.gzzhitu.com/zhitu-api/1554961200037.png" alt="" class="logo" style="width:100%"></a>
+            <a href="index.html"><img src="https://img.gzzhitu.com/zhitu-api/1554961200037.png" alt="" class="logo"
+                                      style="width:100%"></a>
           </h3>
           <div class="footer-social-grids">
             <ul style="text-align: center;">
@@ -271,45 +274,47 @@
       </div>
     </div>
   </footer>
-<!-- footer -->
-<!-- copyright -->
-<div class="copyright">
-  <div class="container">
-    <p>Copyright &copy; 2019.Company name All rights reserved.<a target="_blank" href=""></a>
-    </p>
+  <!-- footer -->
+  <!-- copyright -->
+  <div class="copyright">
+    <div class="container">
+      <p>Copyright &copy; 2019.Company name All rights reserved.<a target="_blank" href=""></a>
+      </p>
+    </div>
   </div>
+  <!-- //copyright -->
+  <script src="js/SmoothScroll.min.js"></script>
+  <script type="text/javascript" src="js/move-top.js"></script>
+  <script type="text/javascript" src="js/easing.js"></script>
+  <!-- here stars scrolling icon -->
+  <script type="text/javascript">
+    $(document).ready(function () {
+      /*
+        var defaults = {
+        containerID: 'toTop', // fading element id
+        containerHoverID: 'toTopHover', // fading element hover id
+        scrollSpeed: 1200,
+        easingType: 'linear'
+        };
+      */
+
+      $().UItoTop({easingType: 'easeOutQuart'});
+
+    });
+  </script>
+  <!-- //here ends scrolling icon -->
+  <!--引入detail页面所需要的js-->
+  <script type="text/javascript" src="js/cookie.js"></script>
+  <script src="./js/ajax.js"></script>
+  <script src="./js/zoom/jquery-1.11.0.min.js"></script>
+  <script src="./js/zoom/jquery.exzoom.js"></script>
+  <script type="text/javascript">
+    $("#exzoom").exzoom({
+      autoPlay: false,
+    });//方法调用，务必在加载完后执行
+  </script>
+  <script src="./js/details.js"></script>
 </div>
-<!-- //copyright -->
-<script src="js/SmoothScroll.min.js"></script>
-<script type="text/javascript" src="js/move-top.js"></script>
-<script type="text/javascript" src="js/easing.js"></script>
-<!-- here stars scrolling icon -->
-<script type="text/javascript">
-  $(document).ready(function () {
-    /*
-      var defaults = {
-      containerID: 'toTop', // fading element id
-      containerHoverID: 'toTopHover', // fading element hover id
-      scrollSpeed: 1200,
-      easingType: 'linear'
-      };
-    */
-
-    $().UItoTop({easingType: 'easeOutQuart'});
-
-  });
-</script>
-<!-- //here ends scrolling icon -->
-<!--引入detail页面所需要的js-->
-<script type="text/javascript" src="js/cookie.js"></script>
-<script src="./js/ajax.js"></script>
-<script src="./js/zoom/jquery-1.11.0.min.js"></script>
-<script src="./js/zoom/jquery.exzoom.js"></script>
-<script type="text/javascript">
-  $("#exzoom").exzoom({
-    autoPlay: false,
-  });//方法调用，务必在加载完后执行
-</script>
-<script src="./js/details.js"></script>
-
 </body>
+<!--登录弹窗-->
+<script src="js/login.js"></script>
