@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Single</title>
+  <title>Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="utf-8">
   <meta name="keywords" content=""/>
@@ -21,7 +21,6 @@
   <!-- font-awesome icons -->
   <link href="css/font-awesome.css" rel="stylesheet">
   <!-- //font-awesome icons -->
-  <link rel="stylesheet" href="css/lightbox.css">
   <!-- font -->
   <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
   <link
@@ -40,19 +39,15 @@
       });
     });
   </script>
-
   <!--[if lt IE 9]>
   <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
   <![endif]-->
-<!--  toastr-->
-  <link rel="stylesheet" href="css/toastr/toastr.css">
-  <script src="js/toastr/toastr.js"></script>
-<!--  //toastr-->
-  <link rel="stylesheet" href="css/single.css">
+  <!--引入index.css-->
   <link rel="stylesheet" href="./css/index.css">
+  <!--	引入分页的css与js-->
+  <link rel="stylesheet" href="./css/myPagination.css">
 
-
-</head>
+</head
 <body>
 <!--登录弹窗-->
 <div id="overCurtain"></div>
@@ -122,7 +117,7 @@
                   </ul>
                 </li>
                 <li><a href="gallery.html">画廊</a></li>
-                <li><a href="rescue.html">待救助</a></li>
+                <li><a class="active" href="rescue.html">待救助</a></li>
                 <li><a href="good.html">商城</a></li>
                 <li><a href="support.html">支持</a></li>
                 <li><a href="contact.html">联系我们</a></li>
@@ -146,173 +141,76 @@
   </div>
 </div>
 <!-- //banner -->
-
-<!--	slider-->
-<div class="w3layouts-banner-slider">
-  <div class="container">
-    <!--    <div class="slider">-->
-    <!--      <div class="callbacks_container">-->
-    <!--        <ul class="rslides callbacks callbacks1" id="slider4">-->
-    <!--          <li>-->
-    <!--            <div class="agileits-banner-info">-->
-    <!--              <img src="images/b1.jpg" height="" width="100%"/>-->
-    <!--              &lt;!&ndash;                <h3>Lorem ipsum dolor sit amet <span>Nulla massa magna</span></h3>&ndash;&gt;-->
-    <!--            </div>-->
-    <!--          </li>-->
-    <!--          <li>-->
-    <!--            <div class="agileits-banner-info">-->
-    <!--              <img src="images/b2.jpg" height="" width="100%"/>-->
-    <!--            </div>-->
-    <!--          </li>-->
-    <!--        </ul>-->
-    <!--      </div>-->
-    <!--      <script src="js/responsiveslides.min.js"></script>-->
-    <!--      <script>-->
-    <!--        // You can also use "$(window).load(function() {"-->
-    <!--        $(function () {-->
-    <!--          // Slideshow 4-->
-    <!--          $("#slider4").responsiveSlides({-->
-    <!--            auto: true,-->
-    <!--            pager: true,-->
-    <!--            nav: true,-->
-    <!--            speed: 500,-->
-    <!--            namespace: "callbacks",-->
-    <!--            before: function () {-->
-    <!--              $('.events').append("<li>before event fired.</li>");-->
-    <!--            },-->
-    <!--            after: function () {-->
-    <!--              $('.events').append("<li>after event fired.</li>");-->
-    <!--            }-->
-    <!--          });-->
-    <!--        });-->
-    <!--      </script>-->
-    <!--      &lt;!&ndash;banner Slider starts Here&ndash;&gt;-->
-    <!--    </div>-->
-
-    <div class="show-img">
-      <img src="images/g1.jpg"/></div>
-    <div class="Card">
-      <div class="card">
-        <div class="cart-head">
-          <p>标题</p>
-          <p class="cart-head-uptime" style="">更新：2019-04-11 11:11:11</p>
-        </div>
-        <div class="card-body">
-          <p>
-            <span>昵称</span>
-          </p>
-          <p>
-            <span>年龄</span>
-            <span>金额</span>
-          </p>
-          <p>
-            <span>性别</span>
-            <span>绝育</span>
-          </p>
-          <p>
-            <span>疫苗</span>
-            <span>所在地</span>
-          </p>
-          <p>
-            <span>状态</span>
-          </p>
-          <div class="cart-bottom">
-            <span onclick="payattention(this)">
-              <i class="fa fa-star-o attention-start-btn" aria-hidden="true"></i>
-            </span>
-            <span class="attention-mes">关注</span>
-            <button class="apply-btn">
-              <span>申请领养</span>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<!--	//slider-->
-
-
-<!-- single-body -->
-<div class="single-body">
+<!-- blog -->
+<div class="blog">
   <!-- container -->
   <div class="container">
-    <div class="single-body-list">
-      <div class="single-body-list-row">
-        <p class="single-body-title">送养原因</p>
-        <span class="single-body-row-content">
-          灭有时间没有时
-        </span>
-      </div>
-
-      <div class="single-body-list-row">
-        <p class="single-body-title">领养条件</p>
-        <span class="single-body-row-content">
-          灭有时间没有时间
-        </span>
-      </div>
-
-      <div class="single-body-list-row">
-        <p class="single-body-title">联系送养人</p>
-        <div class="contacts">
-          <div class="contacts-head-img">
-            <img src="images/a1.jpg"/>
+    <div class="blog-top-grids">
+      <div class="blog-top-left-grid">
+        <div class="left-blog">
+          <div class="blog-left">
+            <div class="blog-left-left">
+              <p>发布于 <a href="#">Admin</a> &nbsp;&nbsp; 2019年4月11日 &nbsp;&nbsp; <a href="#">收藏（10）</a></p>
+              <a href="single.html"><img src="images/b1.jpg" alt=""/></a>
+            </div>
+            <div class="blog-left-right">
+              <a href="single.html">Phasellus ultrices tellus eget ipsum ornare molestie </a>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Sed blandit massa vel mauris sollicitudin
+                dignissim. Phasellus ultrices tellus eget ipsum ornare molestie scelerisque eros dignissim. Phasellus
+                fringilla hendrerit lectus nec vehicula. ultrices tellus eget ipsum ornare consectetur adipiscing
+                elit.Sed blandit .
+                estibulum aliquam neque nibh, sed accumsan nulla ornare sit amet.
+              </p>
+            </div>
+            <div class="clearfix"></div>
           </div>
-          <div class="contacts-info">
-            <p class="contact-nickname">昵称</p>
-            <p class="contacts-address">地址</p>
+          <div class="blog-left">
+            <div class="blog-left-left">
+              <p>Posted By <a href="#">Admin</a> &nbsp;&nbsp; on June 2, 2015 &nbsp;&nbsp; <a href="#">Comments (10)</a>
+              </p>
+              <a href="single.html"><img src="images/b2.jpg" alt=""/></a>
+            </div>
+            <div class="blog-left-right wow fadeInRight animated animated" data-wow-delay=".5s">
+              <a href="single.html">Phasellus ultrices tellus eget ipsum ornare molestie</a>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Sed blandit massa vel mauris sollicitudin
+                dignissim. Phasellus ultrices tellus eget ipsum ornare molestie scelerisque eros dignissim. Phasellus
+                fringilla hendrerit lectus nec vehicula. ultrices tellus eget ipsum ornare consectetur adipiscing
+                elit.Sed blandit .
+                estibulum aliquam neque nibh, sed accumsan nulla ornare sit amet.
+              </p>
+            </div>
+            <div class="clearfix"></div>
           </div>
-        </div>
-        <p class="single-body-list-tips">
-          提醒：如送养人向你索要运费（100%诈骗），治疗费等，切勿付款！请务必联系审核员chongwubang2019核实，以免被骗。
-        </p>
-        <div class="attention">
-          <!--          <i class="fa fa-star-o" aria-hidden="true"></i>-->
-          <i class="fa fa-star attention-start" aria-hidden="true"></i><span>关注</span>
-        </div>
-        <div class="attention-head-img">
-          <div class="attention-head-img-li">
-            <img src="images/g1.jpg"/>
-          </div>
-          <div class="attention-head-img-li">
-            <img src="images/g1.jpg"/>
-          </div>
-          <div class="attention-head-img-li">
-            <img src="images/g1.jpg"/>
-          </div>
-          <div class="attention-head-img-li">
-            <img src="images/g1.jpg"/>
-          </div>
-          <div class="attention-head-img-li">
-            <img src="images/g1.jpg"/>
-          </div>
-          <div class="attention-head-img-li">
-            <img src="images/g1.jpg"/>
-          </div>
-          <div class="attention-head-img-li">
-            <img src="images/g1.jpg"/>
-          </div>
-          <div class="attention-head-img-li">
-            <img src="images/g1.jpg"/>
-          </div>
-          <div class="attention-head-img-li">
-            <img src="images/g1.jpg"/>
-          </div>
-          <div class="attention-head-img-li">
-            <img src="images/g1.jpg"/>
-          </div>
-          <div class="attention-head-img-li">
-            <img src="images/g1.jpg"/>
+          <div class="blog-left">
+            <div class="blog-left-left">
+              <p>Posted By <a href="#">Admin</a> &nbsp;&nbsp; on June 2, 2015 &nbsp;&nbsp; <a href="#">Comments (10)</a>
+              </p>
+              <a href="single.html"><img src="images/b3.jpg" alt=""/></a>
+            </div>
+            <div class="blog-left-right">
+              <a href="single.html">Phasellus ultrices tellus eget ipsum ornare molestie</a>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Sed blandit massa vel mauris sollicitudin
+                dignissim. Phasellus ultrices tellus eget ipsum ornare molestie scelerisque eros dignissim. Phasellus
+                fringilla hendrerit lectus nec vehicula. ultrices tellus eget ipsum ornare consectetur adipiscing
+                elit.Sed blandit .
+                estibulum aliquam neque nibh, sed accumsan nulla ornare sit amet.
+              </p>
+            </div>
+            <div class="clearfix"></div>
           </div>
         </div>
+
+        <nav>
+          <div id="pagination" class="pagination"></div>
+        </nav>
       </div>
 
+      <div class="clearfix"></div>
     </div>
-    <div class="clearfix"></div>
   </div>
   <!-- //container -->
 </div>
-<!-- //single-body -->
+<!-- //blog -->
 <!-- footer -->
 <footer>
   <div class="container">
@@ -397,20 +295,27 @@
   });
 </script>
 <!-- //here ends scrolling icon -->
-
 </body>
 </html>
-<script src="js/single.js"></script>
-<script>
-  // function payattention(target){
-  //   if(target.children[0].className=="fa fa-star attention-start-btn"){
-  //     target.children[0].className="fa fa-star-o attention-start-btn"
-  //
-  //   }else{
-  //     target.children[0].className="fa fa-star attention-start-btn"
-  //   }
-  // }
-
-</script>
 <!--登录弹窗-->
 <script src="js/login.js"></script>
+<!--分页-->
+<script src="./js/myPagination.js"></script>
+<script>
+  window.onload = function () {
+    new Page({
+      id: 'pagination',
+      pageTotal: 50, //必填,总页数
+      pageAmount: 10,  //每页多少条
+      dataTotal: 500, //总共多少条数据
+      curPage:1, //初始页码,不填默认为1
+      pageSize: 5, //分页个数,不填默认为5
+      showPageTotalFlag:true, //是否显示数据统计,不填默认不显示
+      showSkipInputFlag:true, //是否支持跳转,不填默认不显示
+      getPage: function (page) {
+        //获取当前页数
+        console.log(page);
+      }
+    })
+  }
+</script>
