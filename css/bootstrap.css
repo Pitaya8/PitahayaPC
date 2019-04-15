@@ -1120,7 +1120,7 @@ figure {
 img {
   vertical-align: middle;
 }
-.img-responsive,
+
 .thumbnail > img,
 .thumbnail a > img,
 .carousel-inner > .item > img,
@@ -1128,6 +1128,10 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
+}
+.img-responsive{
+  height:11em;
+  width:11em;
 }
 .img-rounded {
   border-radius: 6px;
@@ -6150,7 +6154,7 @@ button.close {
   top: 0;
   bottom: 0;
   left: 0;
-  width: 15%;
+  width: 6%;
   font-size: 20px;
   color: #fff;
   text-align: center;

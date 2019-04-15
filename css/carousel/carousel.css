@@ -1,80 +1,27 @@
-
-.carousel {
-
-    margin:2em 2em 6em 2em;
-    /*width: calc(100% - ($button-spacing * 2));*/
+.showCarousel {
+  padding: 2em 0;
 }
-
-.carousel[data-shift="1"] .carousel-inner > .item {
-    -webkit-transition: all .5s ease-in-out;
-    transition: all .5s ease-in-out;
+.showCarousel .jq22-container .container #full .carousel-inner .row .col-xs-4 {
+  list-style: none;
+  position: relative;
 }
-
-.carousel .carousel-inner > .item.row {
-    margin: 0;
+.showCarousel .jq22-container .container #full .carousel-inner .row .col-xs-4 a .img-responsive {
+  width: 11em;
+  height: 11em;
 }
-li{
-    list-style: none;
+.showCarousel .jq22-container .container #full .carousel-inner .row .col-xs-4 a p {
+  display: inline-block;
+  position: absolute;
+  bottom: -10px;
+  opacity: 0.8;
+  color: black;
+  width: 11em;
+  left: 15px;
+  background: white;
+  text-align: center;
 }
-
-.carousel .carousel-control {
-    background: none;
-    color: transparent;
-    overflow: hidden;
-    text-shadow: none;
-    -webkit-transition: all .3s ease-in-out;
-    transition: all .3s ease-in-out;
-    width: 30px;
+.showCarousel .jq22-container .container #full .carousel-control i {
+  position: absolute;
+  top: 45%;
 }
-
-.carousel .carousel-control:before {
-    color: #444;
-    font-family: 'Glyphicons Halflings';
-    position: absolute;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
-    width: 30px;
-}
-
-.carousel .carousel-control:after {
-    border-radius: 50%;
-    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
-    content: '';
-    height: 60%;
-    position: absolute;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
-    -webkit-transition: all .3s ease-in-out;
-    transition: all .3s ease-in-out;
-    width: 100%;
-}
-
-.carousel .carousel-control:hover:after {
-    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.7);
-}
-
-.carousel .carousel-control.left {
-    left: -30px;
-}
-
-.carousel .carousel-control.left:before {
-    content: '\e079';
-}
-
-.carousel .carousel-control.left:after {
-    right: -100%;
-}
-
-.carousel .carousel-control.right {
-    right: -30px;
-}
-
-.carousel .carousel-control.right:before {
-    content: '\e080';
-}
-
-.carousel .carousel-control.right:after {
-    left: -100%;
-}
+/*# sourceMappingURL=carousel.css.map */

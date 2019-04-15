@@ -1,6 +1,5 @@
 let status = 1;
 $(function () {
-  console.log('页面')
   $('#overCurtain').css('height', $(document).height() + 'px')
 
 });
