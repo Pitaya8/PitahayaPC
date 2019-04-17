@@ -60,6 +60,9 @@
   <!--  引入carousel样式-->
   <link rel="stylesheet" href="css/carousel/carousel.css">
 
+  <!--  引入toast的样式-->
+  <link rel="stylesheet" href="css/toast/toast.css">
+
 
 </head>
 <body>
@@ -82,7 +85,7 @@
              style="border-bottom-right-radius:5px;">
     </div>
     <div id="formfoot">
-      <button id="BSignIn" type="submit">登录</button>
+      <button id="BSignIn" type="submit" >登录</button>
     </div>
   </div>
 </div>
@@ -335,7 +338,8 @@
         <div class="news-right-grid">
           <a href="single.html">橘猫丑丑</a>
           <h5>2019年3月2日</h5>
-          <p>当时是夏天，天气很热，我路过那里遇到她，她在那附近跑来跑去的，也没看到有主人，后来我办完事回来她还在那里，我就想会不会是流浪狗狗，抱着她问了附近的保安，周围的店铺都说不知道哪里跑来的，想着那么热的天不能把她丢那里，又在公路边上很危险就抱回家了，一路很乖很温顺的。接下来都在给她找主人，到处问了，发了帖子，也没有人回复我，最后决定给她找领养，现主人对她很好很幸福，在家称王称霸。
+          <p>
+            当时是夏天，天气很热，我路过那里遇到她，她在那附近跑来跑去的，也没看到有主人，后来我办完事回来她还在那里，我就想会不会是流浪狗狗，抱着她问了附近的保安，周围的店铺都说不知道哪里跑来的，想着那么热的天不能把她丢那里，又在公路边上很危险就抱回家了，一路很乖很温顺的。接下来都在给她找主人，到处问了，发了帖子，也没有人回复我，最后决定给她找领养，现主人对她很好很幸福，在家称王称霸。
 
           </p>
         </div>
@@ -442,3 +446,15 @@
 <script src="js/carousel/carousel.js"></script>
 <!--引入index的js-->
 <script src="js/index.js"></script>
+<!--引入toast的js-->
+<script src="js/toast.js"></script>
+<script>
+  $('#BSignIn').click(function(){
+    console.log('点击')
+    $('#formbody').toast({
+      content: '该账户不存在',
+      duration: 1000,
+      background:'#ff4500',
+    });
+  })
+</script>
