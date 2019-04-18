@@ -45,11 +45,14 @@
   <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
   <![endif]-->
 <!--  toastr-->
-  <link rel="stylesheet" href="css/toastr/toastr.css">
-  <script src="js/toastr/toastr.js"></script>
+<!--  <link rel="stylesheet" href="css/toastr/toastr.css">-->
+<!--  <script src="js/toastr/toastr.js"></script>-->
 <!--  //toastr-->
   <link rel="stylesheet" href="css/single.css">
   <link rel="stylesheet" href="./css/index.css">
+
+<!--  引入toast-->
+  <link rel="stylesheet" href="css/toast/toast.css">
 
 
 </head>
@@ -199,22 +202,22 @@
         </div>
         <div class="card-body">
           <p>
-            <span>昵称</span>
+            <span>昵称：小梨花</span>
           </p>
           <p>
-            <span>年龄</span>
-            <span>金额</span>
+            <span>年龄：2个月</span>
+            <span>金额：免费</span>
           </p>
           <p>
-            <span>性别</span>
-            <span>绝育</span>
+            <span>性别：公</span>
+            <span>绝育：未绝育</span>
           </p>
           <p>
-            <span>疫苗</span>
-            <span>所在地</span>
+            <span>疫苗：未注射疫苗</span>
+            <span>所在地：广州</span>
           </p>
           <p>
-            <span>状态</span>
+            <span>状态：等待领养</span>
           </p>
           <div class="cart-bottom">
             <span onclick="payattention(this)">
@@ -241,14 +244,14 @@
       <div class="single-body-list-row">
         <p class="single-body-title">送养原因</p>
         <span class="single-body-row-content">
-          灭有时间没有时
+          见到的时候全身沾满老鼠胶，饥肠辘辘。为他找个科学喂养，不离不弃的家。
         </span>
       </div>
 
       <div class="single-body-list-row">
         <p class="single-body-title">领养条件</p>
         <span class="single-body-row-content">
-          灭有时间没有时间
+          科学喂养、有病看病、不离不弃[仅限同城领养]
         </span>
       </div>
 
@@ -259,8 +262,8 @@
             <img src="images/a1.jpg"/>
           </div>
           <div class="contacts-info">
-            <p class="contact-nickname">昵称</p>
-            <p class="contacts-address">地址</p>
+            <p class="contact-nickname">我是昵称</p>
+            <p class="contacts-address">广州</p>
           </div>
         </div>
         <p class="single-body-list-tips">
@@ -414,3 +417,31 @@
 </script>
 <!--登录弹窗-->
 <script src="js/login.js"></script>
+<!--引入toast的js-->
+<script src="js/toast.js"></script>
+<script>
+  // $('#register_btn').click(function () {
+  //   showMessage('请输入完整的信息！',
+  //     3000,
+  //     true,
+  //     'bounceInUp-hastrans',
+  //     'bounceOutDown-hastrans');
+  // })
+  function payattention(target){
+    if(target.children[0].className=="fa fa-star attention-start-btn"){
+      target.children[0].className="fa fa-star-o attention-start-btn"
+      showMessage('取消关注！',
+        3000,
+        true,
+        'bounceInUp-hastrans',
+        'bounceOutDown-hastrans');
+    }else{
+      target.children[0].className="fa fa-star attention-start-btn"
+      showMessage('关注成功！',
+        3000,
+        true,
+        'bounceInUp-hastrans',
+        'bounceOutDown-hastrans');
+    }
+  }
+</script>
