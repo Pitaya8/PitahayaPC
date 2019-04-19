@@ -53,6 +53,10 @@
 
   <link rel="stylesheet" href="./css/index.css">
 
+  <!--  引入toast-->
+  <link rel="stylesheet" href="css/toast/toast.css">
+
+
 </head>
 <body>
 <!--登录弹窗-->
@@ -198,7 +202,7 @@
               <button class="number">1</button>
               <button class="addnum">+</button>
               <br><br>
-              <input type="button" id="add_shop_cart" value="加入购物车">
+              <input type="button" id="add_shop_cart" value="加入购物车" onclick="incart()">
             </li>
           </ul>
         </div>
@@ -315,3 +319,15 @@
 </body>
 <!--登录弹窗-->
 <script src="js/login.js"></script>
+<!--引入toast的js-->
+<script src="js/toast.js"></script>
+<script>
+
+  function incart(){
+      showMessage('加入购物车成功！',
+        3000,
+        true,
+        'bounceInUp-hastrans',
+        'bounceOutDown-hastrans');
+  }
+</script>

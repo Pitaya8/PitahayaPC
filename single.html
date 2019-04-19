@@ -14,6 +14,8 @@
   } </script>
   <!-- bootstrap-css -->
   <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all"/>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+
   <!--// bootstrap-css -->
   <!-- css -->
   <link rel="stylesheet" href="css/style.css" type="text/css" media="all"/>
@@ -44,16 +46,15 @@
   <!--[if lt IE 9]>
   <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
   <![endif]-->
-<!--  toastr-->
-<!--  <link rel="stylesheet" href="css/toastr/toastr.css">-->
-<!--  <script src="js/toastr/toastr.js"></script>-->
-<!--  //toastr-->
   <link rel="stylesheet" href="css/single.css">
   <link rel="stylesheet" href="./css/index.css">
 
 <!--  引入toast-->
   <link rel="stylesheet" href="css/toast/toast.css">
 
+  <!--  引入confirm-->
+  <script src="js/confirm/postbirdAlertBox.min.js"></script>
+  <link rel="stylesheet" href="css/confirm/postbirdAlertBox.css">
 
 </head>
 <body>
@@ -153,45 +154,6 @@
 <!--	slider-->
 <div class="w3layouts-banner-slider">
   <div class="container">
-    <!--    <div class="slider">-->
-    <!--      <div class="callbacks_container">-->
-    <!--        <ul class="rslides callbacks callbacks1" id="slider4">-->
-    <!--          <li>-->
-    <!--            <div class="agileits-banner-info">-->
-    <!--              <img src="images/b1.jpg" height="" width="100%"/>-->
-    <!--              &lt;!&ndash;                <h3>Lorem ipsum dolor sit amet <span>Nulla massa magna</span></h3>&ndash;&gt;-->
-    <!--            </div>-->
-    <!--          </li>-->
-    <!--          <li>-->
-    <!--            <div class="agileits-banner-info">-->
-    <!--              <img src="images/b2.jpg" height="" width="100%"/>-->
-    <!--            </div>-->
-    <!--          </li>-->
-    <!--        </ul>-->
-    <!--      </div>-->
-    <!--      <script src="js/responsiveslides.min.js"></script>-->
-    <!--      <script>-->
-    <!--        // You can also use "$(window).load(function() {"-->
-    <!--        $(function () {-->
-    <!--          // Slideshow 4-->
-    <!--          $("#slider4").responsiveSlides({-->
-    <!--            auto: true,-->
-    <!--            pager: true,-->
-    <!--            nav: true,-->
-    <!--            speed: 500,-->
-    <!--            namespace: "callbacks",-->
-    <!--            before: function () {-->
-    <!--              $('.events').append("<li>before event fired.</li>");-->
-    <!--            },-->
-    <!--            after: function () {-->
-    <!--              $('.events').append("<li>after event fired.</li>");-->
-    <!--            }-->
-    <!--          });-->
-    <!--        });-->
-    <!--      </script>-->
-    <!--      &lt;!&ndash;banner Slider starts Here&ndash;&gt;-->
-    <!--    </div>-->
-
     <div class="show-img">
       <img src="images/g1.jpg"/></div>
     <div class="Card">
@@ -224,7 +186,7 @@
               <i class="fa fa-star-o attention-start-btn" aria-hidden="true"></i>
             </span>
             <span class="attention-mes">关注</span>
-            <button class="apply-btn">
+            <button class="apply-btn" onclick="showConfirm(this)">
               <span>申请领养</span>
             </button>
           </div>
@@ -349,12 +311,6 @@
         <div class="clearfix"></div>
       </div>
       <div class="col-md-4 footer-left">
-        <!--        <h4>通讯</h4>-->
-        <!--        <p>描述问题</p>-->
-        <!--        <form action="#" method="post">-->
-        <!--          <input type="email" placeholder="Subscribe" name="Subscribe" required="">-->
-        <!--          <button class="btn1">发送</button>-->
-        <!--        </form>-->
         <div class="col-md-6 footer-grid-left">
           <ul>
             <li><a href="good.html">商城</a></li>
@@ -420,13 +376,6 @@
 <!--引入toast的js-->
 <script src="js/toast.js"></script>
 <script>
-  // $('#register_btn').click(function () {
-  //   showMessage('请输入完整的信息！',
-  //     3000,
-  //     true,
-  //     'bounceInUp-hastrans',
-  //     'bounceOutDown-hastrans');
-  // })
   function payattention(target){
     if(target.children[0].className=="fa fa-star attention-start-btn"){
       target.children[0].className="fa fa-star-o attention-start-btn"
@@ -443,5 +392,50 @@
         'bounceInUp-hastrans',
         'bounceOutDown-hastrans');
     }
+  }
+</script>
+<!--引入confirm-->
+<script>
+  function showConfirm() {
+    let log=0;
+    if(log){
+      PostbirdAlertBox.confirm({
+        'title': '申请领养',
+        'content': '确认申请领养',
+        'okBtn': '确定',
+        'contentColor': 'red',
+        'onConfirm': function () {
+          let status=0;
+          if(status){
+            showMessage('申请成功！',
+              3000,
+              true,
+              'bounceInUp-hastrans',
+              'bounceOutDown-hastrans');
+          }else{
+            showMessage('申请失败，您已经提交过申请！',
+              3000,
+              true,
+              'bounceInUp-hastrans',
+              'bounceOutDown-hastrans');
+          }
+
+        },
+        'onCancel': function () {
+          console.log("Cancel-回调触发后隐藏提示框");
+        }
+      });
+    }else{
+      PostbirdAlertBox.alert({
+        'title': '登录提示',
+        'content': '请先登录',
+        'okBtn': '好的',
+        'contentColor': 'black',
+        'onConfirm': function () {
+
+        }
+      });
+    }
+
   }
 </script>
