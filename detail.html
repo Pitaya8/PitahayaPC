@@ -168,11 +168,21 @@
         <!--大图区域-->
         <div class="exzoom_img_box">
           <ul class='exzoom_img_ul'>
-            <li><img src="http://img-new.boqiicdn.com/Data/Shop/0/14/1445/shoppicpath11540870855_y.jpg?imageView2/2/w/360/h/360/q/100/interlace/0"/></li>
-            <li><img src="http://img-new.boqiicdn.com/Data/Shop/0/14/1445/shoppicpath21536221602_y.jpg?imageView2/2/w/360/h/360/q/100/interlace/0"/></li>
-            <li><img src="http://img-new.boqiicdn.com/Data/Shop/0/14/1445/shoppicpath31536221602_y.jpg?imageView2/2/w/360/h/360/q/100/interlace/0"/></li>
-            <li><img src="http://img-new.boqiicdn.com/Data/Shop/0/14/1445/shoppicpath41536221603_y.jpg?imageView2/2/w/360/h/360/q/100/interlace/0"/></li>
-            <li><img src="http://img-new.boqiicdn.com/Data/Shop/0/14/1445/shoppicpath51536221603_y.jpg?imageView2/2/w/360/h/360/q/100/interlace/0"/></li>
+            <li><img
+              src="http://img-new.boqiicdn.com/Data/Shop/0/14/1445/shoppicpath11540870855_y.jpg?imageView2/2/w/360/h/360/q/100/interlace/0"/>
+            </li>
+            <li><img
+              src="http://img-new.boqiicdn.com/Data/Shop/0/14/1445/shoppicpath21536221602_y.jpg?imageView2/2/w/360/h/360/q/100/interlace/0"/>
+            </li>
+            <li><img
+              src="http://img-new.boqiicdn.com/Data/Shop/0/14/1445/shoppicpath31536221602_y.jpg?imageView2/2/w/360/h/360/q/100/interlace/0"/>
+            </li>
+            <li><img
+              src="http://img-new.boqiicdn.com/Data/Shop/0/14/1445/shoppicpath41536221603_y.jpg?imageView2/2/w/360/h/360/q/100/interlace/0"/>
+            </li>
+            <li><img
+              src="http://img-new.boqiicdn.com/Data/Shop/0/14/1445/shoppicpath51536221603_y.jpg?imageView2/2/w/360/h/360/q/100/interlace/0"/>
+            </li>
           </ul>
         </div>
         <!--缩略图导航-->
@@ -317,17 +327,28 @@
   <script src="./js/details.js"></script>
 </div>
 </body>
-<!--登录弹窗-->
-<script src="js/login.js"></script>
 <!--引入toast的js-->
 <script src="js/toast.js"></script>
+<!--登录弹窗-->
+<script src="js/login.js"></script>
 <script>
-
-  function incart(){
+  function incart() {
+    let status=getCookie('login',()=>{})
+    status=status==='true'?true:false;
+    if(status){
       showMessage('加入购物车成功！',
         3000,
         true,
         'bounceInUp-hastrans',
         'bounceOutDown-hastrans');
+    }else{
+      showMessage('请先登录！',
+        3000,
+        true,
+        'bounceInUp-hastrans',
+        'bounceOutDown-hastrans');
+    }
+
   }
 </script>
+

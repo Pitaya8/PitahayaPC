@@ -1,4 +1,6 @@
-$('#systematicNname').html('123');
+
+let goodType=getCookie('goodType',(res)=>{console.log(res)})
+$('#systematicNname').html(goodType);
 let html='';
 for(let i = 0; i < 3; i++) {
   html += `
