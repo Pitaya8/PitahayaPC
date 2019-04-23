@@ -22,6 +22,8 @@ $('#BSignIn').click(function () {
     success: function (data) {
       if(data.msg=='验证通过'){
         setCookie('login','true')
+        console.log($('#input-topright-loginInput').val())
+        setCookie('userId',$('#input-topright-loginInput').val())
         location.reload()
       }else{
         setCookie('login','false')
