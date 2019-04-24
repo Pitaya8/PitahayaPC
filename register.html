@@ -85,22 +85,23 @@
     <label id="imgLabel">头像：</label>
     <div id="headImg">
     </div>
-    <script type="text/javascript">
+    <div id=""></div>
+    <script>
+      let headImg=''
       let dragImgUpload = new DragImgUpload("#headImg", {
         callback: function (files) {
           //回调函数，可以传递给后台等等
           let file = files[0];
-          console.log(file.name);
+          headImg = $('.img-responsive').eq(0).attr('src');
         }
       })
     </script>
-    <div id=""></div>
 
     <label>账号：</label>
     <input type="text" placeholder="输入账号（账号唯一）" id="register_username">
 
-    <label>昵称：</label>
-    <input type="text" placeholder="输入昵称" id="register_nickname">
+<!--    <label>昵称：</label>-->
+<!--    <input type="text" placeholder="输入昵称" id="register_nickname">-->
 
 
     <label>密码：</label>
@@ -119,16 +120,21 @@
       <ul>
         <li>
           <div class="iradio_minimal-purple">
-            <input type="radio" name="iCheck" id="minimal-radio-nan">
+            <input type="radio" name="sex" id="minimal-radio-nan" value="男">
           </div>
           <label for="minimal-radio-nan">男</label></li>
         <li>
           <div class="iradio_minimal-purple">
-            <input type="radio" name="iCheck" id="minimal-radio-nv" checked>
+            <input type="radio" name="sex" id="minimal-radio-nv" value="女">
           </div>
           <label for="minimal-radio-nv">女</label></li>
       </ul>
     </div>
+    <script>
+      $("#wordStatuslist ul li div").click(function(){
+        $(this).children("input").eq(0).attr('checked','true')
+      })
+    </script>
     <br>
 
     <label>个人签名：</label><br>
@@ -139,26 +145,31 @@
       <ul>
         <li>
           <div class="iradio_minimal-purple">
-            <input type="radio" name="iCheck" id="minimal-radio-wuye">
+            <input type="radio" name="workCondition" id="minimal-radio-wuye" value="无业" checked>
           </div>
           <label for="minimal-radio-wuye">无业</label></li>
         <li>
           <div class="iradio_minimal-purple">
-            <input type="radio" name="iCheck" id="minimal-radio-xuesheng" checked>
+            <input type="radio" name="workCondition" id="minimal-radio-xuesheng" value="学生" >
           </div>
           <label for="minimal-radio-xuesheng">学生</label></li>
         <li>
           <div class="iradio_minimal-purple">
-            <input type="radio" name="iCheck" id="minimal-radio-gongzuo">
+            <input type="radio" name="workCondition" id="minimal-radio-gongzuo" value="工作" >
           </div>
           <label for="minimal-radio-gongzuo">工作</label></li>
         <li>
           <div class="iradio_minimal-purple">
-            <input type="radio" name="iCheck" id="minimal-radio-tuixiu">
+            <input type="radio" name="workCondition" id="minimal-radio-tuixiu" value="退休" >
           </div>
           <label for="minimal-radio-tuixiu">退休</label></li>
       </ul>
     </div>
+    <script>
+      $("#wordStatuslist1 ul li div").click(function(){
+        $(this).children("input").eq(0).attr('checked','true')
+      })
+    </script>
 
     <label>职业：</label>
     <input type="text" id="register_career" placeholder="输入职业">
@@ -169,17 +180,22 @@
       <ul>
         <li>
           <div class="iradio_minimal-purple">
-            <input type="radio" name="iCheck" id="minimal-radio-youjingyan">
+            <input type="radio" name="experience" id="minimal-radio-youjingyan" value="有经验">
           </div>
           <label for="minimal-radio-youjingyan">有经验</label></li>
         <li>
           <div class="iradio_minimal-purple">
-            <input type="radio" name="iCheck" id="minimal-radio-wujingyan" checked>
+            <input type="radio" name="experience" id="minimal-radio-wujingyan" value="无经验">
           </div>
           <label for="minimal-radio-wujingyan">无经验</label></li>
       </ul>
     </div>
     <br>
+    <script>
+      $("#wordStatuslist2 ul li div").click(function(){
+        $(this).children("input").eq(0).attr('checked','true')
+      })
+    </script>
 
 
     <label>婚姻状况：</label>
@@ -187,22 +203,27 @@
       <ul>
         <li>
           <div class="iradio_minimal-purple">
-            <input type="radio" name="iCheck" id="minimal-radio-danshen">
+            <input type="radio" name="marriage" id="minimal-radio-danshen" value="单身">
           </div>
           <label for="minimal-radio-danshen">单身</label></li>
         <li>
           <div class="iradio_minimal-purple">
-            <input type="radio" name="iCheck" id="minimal-radio-lianai" checked>
+            <input type="radio" name="marriage" id="minimal-radio-lianai"  value="恋爱">
           </div>
           <label for="minimal-radio-lianai">恋爱</label></li>
         <li>
           <div class="iradio_minimal-purple">
-            <input type="radio" name="iCheck" id="minimal-radio-yihun" checked>
+            <input type="radio" name="marriage" id="minimal-radio-yihun"  value="已婚">
           </div>
           <label for="minimal-radio-yihun">已婚</label></li>
       </ul>
     </div>
     <br>
+    <script>
+      $("#wordStatuslist3 ul li div").click(function(){
+        $(this).children("input").eq(0).attr('checked','true')
+      })
+    </script>
 
 
     <label>住房情况：</label>
@@ -210,22 +231,27 @@
       <ul>
         <li>
           <div class="iradio_minimal-purple">
-            <input type="radio" name="iCheck" id="minimal-radio-zizhufang">
+            <input type="radio" name="house" id="minimal-radio-zizhufang" value="自住房">
           </div>
           <label for="minimal-radio-zizhufang">自住房</label></li>
         <li>
           <div class="iradio_minimal-purple">
-            <input type="radio" name="iCheck" id="minimal-radio-zhengzufang" checked>
+            <input type="radio" name="house" id="minimal-radio-zhengzufang"  value="整租房">
           </div>
           <label for="minimal-radio-zhengzufang">整租房</label></li>
         <li>
           <div class="iradio_minimal-purple">
-            <input type="radio" name="iCheck" id="minimal-radio-hezu" checked>
+            <input type="radio" name="house" id="minimal-radio-hezu"  value="合租">
           </div>
           <label for="minimal-radio-hezu">合租</label></li>
       </ul>
     </div>
     <br>
+    <script>
+      $("#wordStatuslist4 ul li div").click(function(){
+        $(this).children("input").eq(0).attr('checked','true')
+      })
+    </script>
 
 
     <label>原住民：</label>
@@ -233,32 +259,37 @@
       <ul>
         <li>
           <div class="iradio_minimal-purple">
-            <input type="radio" name="iCheck" id="minimal-radio-mao">
+            <input type="radio" name="abo" id="minimal-radio-mao" value="猫">
           </div>
           <label for="minimal-radio-mao">猫</label></li>
         <li>
           <div class="iradio_minimal-purple">
-            <input type="radio" name="iCheck" id="minimal-radio-gou" checked>
+            <input type="radio" name="abo" id="minimal-radio-gou"  value="狗">
           </div>
           <label for="minimal-radio-gou">狗</label></li>
         <li>
           <div class="iradio_minimal-purple">
-            <input type="radio" name="iCheck" id="minimal-radio-maogou" checked>
+            <input type="radio" name="abo" id="minimal-radio-maogou"  value="猫狗">
           </div>
           <label for="minimal-radio-maogou">猫狗</label></li>
         <li>
           <div class="iradio_minimal-purple">
-            <input type="radio" name="iCheck" id="minimal-radio-qitachoongwu" checked>
+            <input type="radio" name="abo" id="minimal-radio-qitachoongwu"  value="其他">
           </div>
           <label for="minimal-radio-qitachoongwu">其他</label></li>
         <li>
           <div class="iradio_minimal-purple">
-            <input type="radio" name="iCheck" id="minimal-radio-wuchognwu" checked>
+            <input type="radio" name="abo" id="minimal-radio-wuchognwu"  value="无">
           </div>
           <label for="minimal-radio-wuchognwu">无</label></li>
       </ul>
     </div>
     <br>
+    <script>
+      $("#wordStatuslist5 ul li div").click(function(){
+        $(this).children("input").eq(0).attr('checked','true')
+      })
+    </script>
 
 
     <label>月收入情况：</label>
@@ -266,27 +297,32 @@
       <ul>
         <li>
           <div class="iradio_minimal-purple">
-            <input type="radio" name="iCheck" id="minimal-radio-3000">
+            <input type="radio" name="income" id="minimal-radio-3000"  value="小于3千">
           </div>
           <label for="minimal-radio-mao">小于3千</label></li>
         <li>
           <div class="iradio_minimal-purple">
-            <input type="radio" name="iCheck" id="minimal-radio-3000-6000" checked>
+            <input type="radio" name="income" id="minimal-radio-3000-6000"   value="3千~6千">
           </div>
           <label for="minimal-radio-gou">3千~6千</label></li>
         <li>
           <div class="iradio_minimal-purple">
-            <input type="radio" name="iCheck" id="minimal-radio-6000-10000" checked>
+            <input type="radio" name="income" id="minimal-radio-6000-10000"   value="6千~1万">
           </div>
           <label for="minimal-radio-maogou">6千~1万</label></li>
         <li>
           <div class="iradio_minimal-purple">
-            <input type="radio" name="iCheck" id="minimal-radio-10000" checked>
+            <input type="radio" name="income" id="minimal-radio-10000"   value="大于1万">
           </div>
           <label for="minimal-radio-qitachoongwu">大于1万</label></li>
       </ul>
     </div>
     <br>
+    <script>
+      $("#wordStatuslist6 ul li div").click(function(){
+        $(this).children("input").eq(0).attr('checked','true')
+      })
+    </script>
 
 
     <label></label>
@@ -340,11 +376,34 @@
 <script src="js/toast.js"></script>
 <script>
   $('#register_btn').click(function () {
-    showMessage('请输入完整的信息！',
-      3000,
-      true,
-      'bounceInUp-hastrans',
-      'bounceOutDown-hastrans');
+    let userId = $('#register_username').val();
+    let password = $('#register_password').val();
+    let phone = $('#register_phone').val();
+    let sign = $('#register_signature').val();
+    let sex=$("input[name='sex']:checked").val();
+    let workCondition=$("input[name='workCondition']:checked").val();
+    let experience=$("input[name='experience']:checked").val();
+    let marriage=$("input[name='marriage']:checked").val();
+    let career = $('#register_career').val();
+    let income=$("input[name='income']:checked").val();
+    let abo=$("input[name='abo']:checked").val();
+    let house=$("input[name='house']:checked").val();
+
+    console.log(headImg)
+    console.log(sex)
+    console.log(workCondition)
+    console.log(experience)
+    console.log(marriage)
+    console.log(career)
+    console.log(income)
+    console.log(abo)
+    console.log(house)
+  //   showMessage('请输入完整的信息！',
+  //     3000,
+  //     true,
+  //     'bounceInUp-hastrans',
+  //     'bounceOutDown-hastrans');
   })
+
 </script>
 

@@ -1,4 +1,5 @@
 let userId = getCookie('userId');
+console.log(userId)
 $.ajax({
   type: "POST",
   url: "http://127.0.0.1:4000/api/userOrder/search_user_all_order",
@@ -19,9 +20,9 @@ $.ajax({
           goodId: data[i].goodId
         },
         success: function (datas) {
-          let headimg=datas[0].bannerImg.split(';');
+          let headimg = datas[0].bannerImg.split(';');
           html += `
-			<li>
+			<li name="${data[i].id}" goodId="${data[i].goodId}">
                 <input type="checkbox" class="good_check"/>
                 <img src="${headimg[0]}"/>
                 <p>
@@ -36,32 +37,31 @@ $.ajax({
 \t\t\t\t\t\t\t\t\t<button class="addnum">+</button>
 \t\t\t\t\t\t\t\t</span>
                 <span class="good_total">
-\t\t\t\t\t\t\t\t\t￥3.8
+\t\t\t\t\t\t\t\t\t￥${data[i].num*datas[0].price}
 \t\t\t\t\t\t\t\t</span>
                 <span class="del_li">删除</span>
               </li>
 			`
         }
       })
-
     }
-    console.log(html)
     document.querySelector('#shop_cart_body_list_content_list_ul').innerHTML = html
-
   }
 });
 
 //1.点击每一行的删除键，删除该行
 $('#shop_cart_body_list_content_list ul').on('click', '.del_li', function () {
-  var res = confirm('您确定要删除该商品吗？');
+  let res = confirm('您确定要删除该商品吗？');
   if (res) {
     $(this).parent().remove();
   }
-  var this_id = $(this).parent().attr('name');
+
+  let this_id = $(this).parent().attr('name');
+
   //数据库的更新
-  // update_data('1',this_id,'delet');
+  update_data('1', this_id, 'delet');
   updata();
-  var arr = checked();
+  let arr = checked();
   allnum(arr);
 
   //总价
@@ -72,9 +72,10 @@ $('#shop_cart_body_list_content_list ul').on('click', '.del_li', function () {
 $('#shop_cart_body_list_content_list ul').on('click', '.addnum', function () {
   var val = $(this).prev().val();
   var this_id = $(this).parent().parent().attr('name');
+  let goodId = $(this).parent().parent().attr('goodId');
   val++;
   //数据库的更新
-  // update_data(val,this_id,'update');
+  update_data(val,this_id,'updata',goodId,val,userId);
   $(this).prev().val(val);
   //小计
   price($(this));
@@ -85,38 +86,40 @@ $('#shop_cart_body_list_content_list ul').on('click', '.addnum', function () {
   allprice(arr);
 });
 
-function update_data(val, this_id, deal_type) {
-  var now_user = getCookie('username');
-  ajax('POST', 'api/database/search_user.php',
-    'username=' + now_user, function (str) {
-      var data = JSON.parse(str);
-      //将从数据库中调出的商品id+商品数量信息进行处理
-      var shop_cart_goodsid = (data[0].shop_cart_goodsid).split(',');
-      var shop_cart_goodsnum = (data[0].shop_cart_goodsnum).split(',');
-
-      if (deal_type == 'update') {
-        var shop_vart_num = val;
-        var shop_cart = this_id;
-        var indexs = shop_cart_goodsid.indexOf(shop_cart);
-        shop_cart_goodsnum[indexs] = String(shop_vart_num);
-      } else if (deal_type == 'delet') {
-        var indexs = shop_cart_goodsid.indexOf(this_id);  //找到数据库中对应的商品ID的所引致
-        shop_cart_goodsid.splice(indexs, 1);//删除数组中的该id商品
-        shop_cart_goodsnum.splice(indexs, 1);
-      }
-      //更新到数据库中
-      ajax('POST', 'api/database/update_user.php', 'username=' + now_user + '&shop_cart=' + shop_cart_goodsid + '&shop_cart_num=' + shop_cart_goodsnum,
-        function (str) {
-          console.log(str)
-        }
-      )
+function update_data(val, this_id, deal_type,goodId,num,userId) {
+  let port='';
+  let data={}
+  if(deal_type=='delet'){
+    port='delet_user_order';
+    data={id: this_id}
+  }else if(deal_type=='updata'){
+    port='edit_user_order';
+    data={
+      userId:userId,
+      goodId:goodId,
+      num:num
     }
-  )
+  }
+  $.ajax({
+    type: "POST",
+    url: "http://127.0.0.1:4000/api/userOrder/"+port,
+    async: false, //同步
+    dataType: "json",
+    data: data,
+    success: function (data) {
+      if (deal_type == 'update') {
+
+      } else if (deal_type == 'delet') {
+
+      }
+    }
+  })
 }
 
 //3.点击减号，减少数量
 $('#shop_cart_body_list_content_list ul').on('click', '.cutnum', function () {
-  var val = $(this).next().val();
+  let val = $(this).next().val();
+  let goodId = $(this).parent().parent().attr('goodId');
   val--;
   if (val <= 0) {
     val = 0;
@@ -125,9 +128,9 @@ $('#shop_cart_body_list_content_list ul').on('click', '.cutnum', function () {
   //小计
   price($(this));
   //数据库的更新
-  // var this_id=$(this).parent().parent().attr('name');
-  update_data(val, this_id, 'update');
-  var arr = checked();
+  let this_id=$(this).parent().parent().attr('name');
+  update_data(val,this_id,'updata',goodId,val,userId);
+  let arr = checked();
   allnum(arr);  //算总数量
   //总价
   allprice(arr);
